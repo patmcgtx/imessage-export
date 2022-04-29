@@ -23,8 +23,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func saveAction(_ sender: AnyObject?) {
-        // TODO patmcg impl
-    }    
+        
+        // For now, this is just a place to trigger some code
+                
+        if let dbURL = ChatDbSelector().promtForChatDb() {            
+            let chat = ChatDb(fileURL: dbURL)
+            let num = chat.numMessages
+            print(num)
+        }
+
+    }
     
 }
 

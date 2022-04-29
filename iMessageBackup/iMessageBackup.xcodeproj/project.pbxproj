@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69232E87281C4D9A00F3D509 /* ChatDbSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69232E86281C4D9A00F3D509 /* ChatDbSelector.swift */; };
 		69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB846281B7C6100C98DD2 /* AppDelegate.swift */; };
 		69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB848281B7C6100C98DD2 /* ViewController.swift */; };
 		69CCB84E281B7C6300C98DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84D281B7C6300C98DD2 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		69CCB866281B7C6300C98DD2 /* iMessageBackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */; };
 		69CCB868281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */; };
 		69E68556281C1471001E000B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 69E68555281C1471001E000B /* SQLite */; };
+		69E68559281C1576001E000B /* ChatDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E68558281C1576001E000B /* ChatDb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69232E86281C4D9A00F3D509 /* ChatDbSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDbSelector.swift; sourceTree = "<group>"; };
 		69CCB843281B7C6100C98DD2 /* iMessageBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB846281B7C6100C98DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CCB848281B7C6100C98DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		69CCB861281B7C6300C98DD2 /* iMessageBackupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessageBackupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupUITests.swift; sourceTree = "<group>"; };
 		69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		69E68558281C1576001E000B /* ChatDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69232E85281C4D8400F3D509 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				69232E86281C4D9A00F3D509 /* ChatDbSelector.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		69CCB83A281B7C6100C98DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,8 @@
 		69CCB845281B7C6100C98DD2 /* iMessageBackup */ = {
 			isa = PBXGroup;
 			children = (
+				69232E85281C4D8400F3D509 /* UI */,
+				69E68557281C1564001E000B /* ChatDb */,
 				69CCB846281B7C6100C98DD2 /* AppDelegate.swift */,
 				69CCB848281B7C6100C98DD2 /* ViewController.swift */,
 				69CCB84D281B7C6300C98DD2 /* Assets.xcassets */,
@@ -121,6 +135,14 @@
 				69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */,
 			);
 			path = iMessageBackupUITests;
+			sourceTree = "<group>";
+		};
+		69E68557281C1564001E000B /* ChatDb */ = {
+			isa = PBXGroup;
+			children = (
+				69E68558281C1576001E000B /* ChatDb.swift */,
+			);
+			path = ChatDb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			files = (
 				69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */,
 				69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */,
+				69232E87281C4D9A00F3D509 /* ChatDbSelector.swift in Sources */,
+				69E68559281C1576001E000B /* ChatDb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
