@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB846281B7C6100C98DD2 /* AppDelegate.swift */; };
+		69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB848281B7C6100C98DD2 /* ViewController.swift */; };
+		69CCB84C281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB84A281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld */; };
+		69CCB84E281B7C6300C98DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84D281B7C6300C98DD2 /* Assets.xcassets */; };
+		69CCB851281B7C6300C98DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84F281B7C6300C98DD2 /* Main.storyboard */; };
+		69CCB85C281B7C6300C98DD2 /* iMessageBackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */; };
+		69CCB866281B7C6300C98DD2 /* iMessageBackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */; };
+		69CCB868281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69CCB858281B7C6300C98DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69CCB83B281B7C6100C98DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69CCB842281B7C6100C98DD2;
+			remoteInfo = iMessageBackup;
+		};
+		69CCB862281B7C6300C98DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69CCB83B281B7C6100C98DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69CCB842281B7C6100C98DD2;
+			remoteInfo = iMessageBackup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69CCB843281B7C6100C98DD2 /* iMessageBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69CCB846281B7C6100C98DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69CCB848281B7C6100C98DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69CCB84B281B7C6100C98DD2 /* iMessageBackup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMessageBackup.xcdatamodel; sourceTree = "<group>"; };
+		69CCB84D281B7C6300C98DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69CCB850281B7C6300C98DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackup.entitlements; sourceTree = "<group>"; };
+		69CCB857281B7C6300C98DD2 /* iMessageBackupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessageBackupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupTests.swift; sourceTree = "<group>"; };
+		69CCB861281B7C6300C98DD2 /* iMessageBackupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessageBackupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupUITests.swift; sourceTree = "<group>"; };
+		69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69CCB840281B7C6100C98DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CCB854281B7C6300C98DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CCB85E281B7C6300C98DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69CCB83A281B7C6100C98DD2 = {
+			isa = PBXGroup;
+			children = (
+				69CCB845281B7C6100C98DD2 /* iMessageBackup */,
+				69CCB85A281B7C6300C98DD2 /* iMessageBackupTests */,
+				69CCB864281B7C6300C98DD2 /* iMessageBackupUITests */,
+				69CCB844281B7C6100C98DD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69CCB844281B7C6100C98DD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69CCB843281B7C6100C98DD2 /* iMessageBackup.app */,
+				69CCB857281B7C6300C98DD2 /* iMessageBackupTests.xctest */,
+				69CCB861281B7C6300C98DD2 /* iMessageBackupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69CCB845281B7C6100C98DD2 /* iMessageBackup */ = {
+			isa = PBXGroup;
+			children = (
+				69CCB846281B7C6100C98DD2 /* AppDelegate.swift */,
+				69CCB848281B7C6100C98DD2 /* ViewController.swift */,
+				69CCB84D281B7C6300C98DD2 /* Assets.xcassets */,
+				69CCB84F281B7C6300C98DD2 /* Main.storyboard */,
+				69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */,
+				69CCB84A281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld */,
+			);
+			path = iMessageBackup;
+			sourceTree = "<group>";
+		};
+		69CCB85A281B7C6300C98DD2 /* iMessageBackupTests */ = {
+			isa = PBXGroup;
+			children = (
+				69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */,
+			);
+			path = iMessageBackupTests;
+			sourceTree = "<group>";
+		};
+		69CCB864281B7C6300C98DD2 /* iMessageBackupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */,
+				69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */,
+			);
+			path = iMessageBackupUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69CCB842281B7C6100C98DD2 /* iMessageBackup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69CCB86B281B7C6300C98DD2 /* Build configuration list for PBXNativeTarget "iMessageBackup" */;
+			buildPhases = (
+				69CCB83F281B7C6100C98DD2 /* Sources */,
+				69CCB840281B7C6100C98DD2 /* Frameworks */,
+				69CCB841281B7C6100C98DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iMessageBackup;
+			productName = iMessageBackup;
+			productReference = 69CCB843281B7C6100C98DD2 /* iMessageBackup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69CCB856281B7C6300C98DD2 /* iMessageBackupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69CCB86E281B7C6300C98DD2 /* Build configuration list for PBXNativeTarget "iMessageBackupTests" */;
+			buildPhases = (
+				69CCB853281B7C6300C98DD2 /* Sources */,
+				69CCB854281B7C6300C98DD2 /* Frameworks */,
+				69CCB855281B7C6300C98DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69CCB859281B7C6300C98DD2 /* PBXTargetDependency */,
+			);
+			name = iMessageBackupTests;
+			productName = iMessageBackupTests;
+			productReference = 69CCB857281B7C6300C98DD2 /* iMessageBackupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69CCB860281B7C6300C98DD2 /* iMessageBackupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69CCB871281B7C6300C98DD2 /* Build configuration list for PBXNativeTarget "iMessageBackupUITests" */;
+			buildPhases = (
+				69CCB85D281B7C6300C98DD2 /* Sources */,
+				69CCB85E281B7C6300C98DD2 /* Frameworks */,
+				69CCB85F281B7C6300C98DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69CCB863281B7C6300C98DD2 /* PBXTargetDependency */,
+			);
+			name = iMessageBackupUITests;
+			productName = iMessageBackupUITests;
+			productReference = 69CCB861281B7C6300C98DD2 /* iMessageBackupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69CCB83B281B7C6100C98DD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					69CCB842281B7C6100C98DD2 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					69CCB856281B7C6300C98DD2 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 69CCB842281B7C6100C98DD2;
+					};
+					69CCB860281B7C6300C98DD2 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 69CCB842281B7C6100C98DD2;
+					};
+				};
+			};
+			buildConfigurationList = 69CCB83E281B7C6100C98DD2 /* Build configuration list for PBXProject "iMessageBackup" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69CCB83A281B7C6100C98DD2;
+			productRefGroup = 69CCB844281B7C6100C98DD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69CCB842281B7C6100C98DD2 /* iMessageBackup */,
+				69CCB856281B7C6300C98DD2 /* iMessageBackupTests */,
+				69CCB860281B7C6300C98DD2 /* iMessageBackupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69CCB841281B7C6100C98DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69CCB84E281B7C6300C98DD2 /* Assets.xcassets in Resources */,
+				69CCB851281B7C6300C98DD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CCB855281B7C6300C98DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CCB85F281B7C6300C98DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69CCB83F281B7C6100C98DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69CCB84C281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld in Sources */,
+				69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */,
+				69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CCB853281B7C6300C98DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69CCB85C281B7C6300C98DD2 /* iMessageBackupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CCB85D281B7C6300C98DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69CCB868281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift in Sources */,
+				69CCB866281B7C6300C98DD2 /* iMessageBackupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69CCB859281B7C6300C98DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69CCB842281B7C6100C98DD2 /* iMessageBackup */;
+			targetProxy = 69CCB858281B7C6300C98DD2 /* PBXContainerItemProxy */;
+		};
+		69CCB863281B7C6300C98DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69CCB842281B7C6100C98DD2 /* iMessageBackup */;
+			targetProxy = 69CCB862281B7C6300C98DD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69CCB84F281B7C6300C98DD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69CCB850281B7C6300C98DD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69CCB869281B7C6300C98DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69CCB86A281B7C6300C98DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		69CCB86C281B7C6300C98DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iMessageBackup/iMessageBackup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R2A5774NX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roundtripsoftware.iMessageBackup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		69CCB86D281B7C6300C98DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iMessageBackup/iMessageBackup.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R2A5774NX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roundtripsoftware.iMessageBackup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		69CCB86F281B7C6300C98DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R2A5774NX;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roundtripsoftware.iMessageBackupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMessageBackup.app/Contents/MacOS/iMessageBackup";
+			};
+			name = Debug;
+		};
+		69CCB870281B7C6300C98DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R2A5774NX;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roundtripsoftware.iMessageBackupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMessageBackup.app/Contents/MacOS/iMessageBackup";
+			};
+			name = Release;
+		};
+		69CCB872281B7C6300C98DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R2A5774NX;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roundtripsoftware.iMessageBackupUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iMessageBackup;
+			};
+			name = Debug;
+		};
+		69CCB873281B7C6300C98DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R2A5774NX;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roundtripsoftware.iMessageBackupUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = iMessageBackup;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69CCB83E281B7C6100C98DD2 /* Build configuration list for PBXProject "iMessageBackup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69CCB869281B7C6300C98DD2 /* Debug */,
+				69CCB86A281B7C6300C98DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69CCB86B281B7C6300C98DD2 /* Build configuration list for PBXNativeTarget "iMessageBackup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69CCB86C281B7C6300C98DD2 /* Debug */,
+				69CCB86D281B7C6300C98DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69CCB86E281B7C6300C98DD2 /* Build configuration list for PBXNativeTarget "iMessageBackupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69CCB86F281B7C6300C98DD2 /* Debug */,
+				69CCB870281B7C6300C98DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69CCB871281B7C6300C98DD2 /* Build configuration list for PBXNativeTarget "iMessageBackupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69CCB872281B7C6300C98DD2 /* Debug */,
+				69CCB873281B7C6300C98DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69CCB84A281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69CCB84B281B7C6100C98DD2 /* iMessageBackup.xcdatamodel */,
+			);
+			currentVersion = 69CCB84B281B7C6100C98DD2 /* iMessageBackup.xcdatamodel */;
+			path = iMessageBackup.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 69CCB83B281B7C6100C98DD2 /* Project object */;
+}
