@@ -14,6 +14,7 @@
 		69CCB85C281B7C6300C98DD2 /* iMessageBackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */; };
 		69CCB866281B7C6300C98DD2 /* iMessageBackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */; };
 		69CCB868281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */; };
+		69E68556281C1471001E000B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 69E68555281C1471001E000B /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E68556281C1471001E000B /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,9 @@
 			dependencies = (
 			);
 			name = iMessageBackup;
+			packageProductDependencies = (
+				69E68555281C1471001E000B /* SQLite */,
+			);
 			productName = iMessageBackup;
 			productReference = 69CCB843281B7C6100C98DD2 /* iMessageBackup.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 69CCB83A281B7C6100C98DD2;
+			packageReferences = (
+				69E68554281C1471001E000B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 69CCB844281B7C6100C98DD2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -605,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		69E68554281C1471001E000B /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		69E68555281C1471001E000B /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69E68554281C1471001E000B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 69CCB83B281B7C6100C98DD2 /* Project object */;
 }
