@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB846281B7C6100C98DD2 /* AppDelegate.swift */; };
 		69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB848281B7C6100C98DD2 /* ViewController.swift */; };
-		69CCB84C281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB84A281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld */; };
 		69CCB84E281B7C6300C98DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84D281B7C6300C98DD2 /* Assets.xcassets */; };
 		69CCB851281B7C6300C98DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84F281B7C6300C98DD2 /* Main.storyboard */; };
 		69CCB85C281B7C6300C98DD2 /* iMessageBackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */; };
@@ -38,7 +37,6 @@
 		69CCB843281B7C6100C98DD2 /* iMessageBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB846281B7C6100C98DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CCB848281B7C6100C98DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		69CCB84B281B7C6100C98DD2 /* iMessageBackup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMessageBackup.xcdatamodel; sourceTree = "<group>"; };
 		69CCB84D281B7C6300C98DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69CCB850281B7C6300C98DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackup.entitlements; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				69CCB84D281B7C6300C98DD2 /* Assets.xcassets */,
 				69CCB84F281B7C6300C98DD2 /* Main.storyboard */,
 				69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */,
-				69CCB84A281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld */,
 			);
 			path = iMessageBackup;
 			sourceTree = "<group>";
@@ -254,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69CCB84C281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld in Sources */,
 				69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */,
 				69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */,
 			);
@@ -609,19 +605,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		69CCB84A281B7C6100C98DD2 /* iMessageBackup.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				69CCB84B281B7C6100C98DD2 /* iMessageBackup.xcdatamodel */,
-			);
-			currentVersion = 69CCB84B281B7C6100C98DD2 /* iMessageBackup.xcdatamodel */;
-			path = iMessageBackup.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 69CCB83B281B7C6100C98DD2 /* Project object */;
 }
