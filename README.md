@@ -1,5 +1,5 @@
 # iMessage Backup
-This macOS app backs up your iMessages to your specification.
+This macOS app will back up your iMessages to your specification. (Work in progeress.)
 
 ### Wireframe
 ![iMessage Backup mock](https://raw.githubusercontent.com/patmcgtx/imessage-backup/main/mocks/Step%204.png)
