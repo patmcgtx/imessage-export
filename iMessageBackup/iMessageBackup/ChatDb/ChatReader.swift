@@ -27,19 +27,20 @@ struct ChatReader {
         }
     }
     
-    /**
-     The total number of messages in the chat database.
-     */
-    var numMessages: Swift.Result<Int, Error> {
+    /// Counts metrics from the chat database.
+    var metrics: Swift.Result<ChatMetrics, Error> {
         do {
+            let chats = Table("chat")
+            let guid = Expression<String>("guid")
+            let numChats = try db?.scalar(chats.select(guid.count)) ?? -1
+            
             let messages = Table("message")
-            let text = Expression<String>("text")
-            let count = try db?.scalar(messages.select(text.count)) ?? -1
-            return .success(count)
+            let numMessages = try db?.scalar(messages.select(guid.count)) ?? -1
+
+            return .success(ChatMetrics(numChats: numChats, numMessages: numMessages))
         } catch {
-            print(error) // TODO patmcg add error handling
             return .failure(error)
         }
     }
-    
+
 }
