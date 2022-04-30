@@ -710,24 +710,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9">
-                                <rect key="frame" x="10" y="242" width="460" height="16"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="center" title="status" id="C9d-hB-qOW">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
+                                <rect key="frame" x="313" y="187" width="145" height="48"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" title="Found 107280 messages and 748 chats." id="C9d-hB-qOW">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhH-U3-WH9" userLabel="Step 1 msg">
+                                <rect key="frame" x="39" y="202" width="156" height="17"/>
+                                <textFieldCell key="cell" title="Find the chat database." allowsEditingTextAttributes="YES" id="2Hf-WG-jzF">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-Lg-gYu" userLabel="Step 1 label">
+                                <rect key="frame" x="39" y="227" width="156" height="19"/>
+                                <textFieldCell key="cell" title="Step 1" allowsEditingTextAttributes="YES" id="nx9-Er-ZKA">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-nA-b5T" userLabel="Find btn">
+                                <rect key="frame" x="210" y="194" width="60" height="32"/>
+                                <buttonCell key="cell" type="push" title="Find" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rU5-iT-nf0" userLabel="Find btn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Ni-eFF">
+                                <rect key="frame" x="287" y="202.5" width="16.5" height="17"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="ffJ-bQ-u1g"/>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="bottom" constant="12" id="8JJ-Ed-Zoc"/>
-                            <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="12" id="TeT-Jh-zVl"/>
-                            <constraint firstItem="rWk-PS-3a9" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="12" id="m51-I1-kLi"/>
-                            <constraint firstAttribute="trailing" secondItem="rWk-PS-3a9" secondAttribute="trailing" constant="12" id="mrV-wo-jXa"/>
+                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="0uV-Lm-lPZ"/>
+                            <constraint firstItem="Fuo-Ni-eFF" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="trailing" constant="24" id="57g-qn-tJZ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="trailing" priority="250" constant="24" id="Dej-jC-iiK"/>
+                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="trailing" secondItem="RhH-U3-WH9" secondAttribute="trailing" id="GQZ-vB-XNn"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="IEF-kz-1U3"/>
+                            <constraint firstItem="Fuo-Ni-eFF" firstAttribute="centerY" secondItem="rWk-PS-3a9" secondAttribute="centerY" id="Izl-Xp-vnN"/>
+                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="LJa-IC-Jk1"/>
+                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" priority="750" constant="24" id="O06-LJ-aaj"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="trailing" constant="24" id="VZq-cD-9JD"/>
+                            <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="Zpk-Or-Fm6"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="i74-Tw-tZc"/>
+                            <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="mi4-Y6-BtZ"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="RhH-U3-WH9" secondAttribute="centerY" id="uEg-gl-ieh"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="statusLabel" destination="rWk-PS-3a9" id="5ep-mj-TBH"/>
+                        <outlet property="dbSelectStatusLabel" destination="rWk-PS-3a9" id="5ep-mj-TBH"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -735,4 +771,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hand.thumbsup" catalog="system" width="16" height="17"/>
+    </resources>
 </document>

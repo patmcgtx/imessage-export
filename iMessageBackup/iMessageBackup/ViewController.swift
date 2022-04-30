@@ -9,14 +9,14 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var statusLabel: NSTextField!
+    @IBOutlet weak var dbSelectStatusLabel: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     private func updateStatus(_ status: String) {
-        self.statusLabel.stringValue = status
+        self.dbSelectStatusLabel.stringValue = status
     }
     
     override func viewDidAppear() {
