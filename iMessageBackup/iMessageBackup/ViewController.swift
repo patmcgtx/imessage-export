@@ -25,9 +25,9 @@ class ViewController: NSViewController {
         
         if let dbURL = ChatDbFinder().promptForChatDb() {
             let chatReader = ChatReader(dbPath: dbURL.path)
-            switch chatReader?.numMessages {
-            case .success(let count):
-                self.updateStatus("Found \(count) messages.")
+            switch chatReader?.metrics {
+            case .success(let metrics):
+                self.updateStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.")
             case .failure(let error):
                 self.updateStatus(error.localizedDescription)
             case .none:
