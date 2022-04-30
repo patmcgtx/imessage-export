@@ -711,8 +711,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
-                                <rect key="frame" x="313" y="187" width="145" height="48"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="left" title="Found 107280 messages and 748 chats." id="C9d-hB-qOW">
+                                <rect key="frame" x="313" y="203" width="4" height="16"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" id="C9d-hB-qOW">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -740,8 +740,11 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="findChatDb:" target="XfG-lQ-9wD" id="kGh-jo-lnQ"/>
+                                </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Ni-eFF">
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Ni-eFF" userLabel="Step 1 thumbs up">
                                 <rect key="frame" x="287" y="202.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="ffJ-bQ-u1g"/>
                             </imageView>
@@ -763,7 +766,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dbSelectStatusLabel" destination="rWk-PS-3a9" id="5ep-mj-TBH"/>
+                        <outlet property="findDbStatusLabel" destination="rWk-PS-3a9" id="5ep-mj-TBH"/>
+                        <outlet property="findDbThumbsUp" destination="Fuo-Ni-eFF" id="hrJ-V9-fyO"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
