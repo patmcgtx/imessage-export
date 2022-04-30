@@ -23,19 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-    @IBAction func saveAction(_ sender: AnyObject?) {
-        
-        // For now, this is just a place to trigger some code
-        
-        if let dbURL = ChatDbFinder().promptForChatDb() {
-            let chatReader = ChatReader(dbPath: dbURL.path)
-            switch chatReader?.numMessages {
-            case .success(let count): print("Found \(count) messages.")
-            case .failure(let error): print(error.localizedDescription)
-            case .none: print("No database")
-            }
-        }
-        
+    @IBAction func saveAction(_ sender: AnyObject?) {        
     }
     
 }
