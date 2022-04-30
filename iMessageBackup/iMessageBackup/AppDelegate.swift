@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import SQLite
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -26,10 +27,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // For now, this is just a place to trigger some code
                 
-        if let dbURL = ChatDbSelector().promtForChatDb() {            
-            let chat = ChatDb(fileURL: dbURL)
-            let num = chat.numMessages
-            print(num)
+        if let dbURL = ChatDbFinder().promtForChatDb() {            
+            let chatReader = ChatReader(dbPath: dbURL.path)
+            switch chatReader?.numMessages {
+            case .success(let count): print("Found \(count) messages.")
+            case .failure(let error): print(error.localizedDescription)
+            case .none: print("No database")
+            }
         }
 
     }
