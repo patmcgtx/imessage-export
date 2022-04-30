@@ -8,18 +8,18 @@
 import AppKit
 import UniformTypeIdentifiers
 
-/// Provides a way to find the chat database file
+/// Provides a way to find the chat database file.
 struct ChatDbFinder {
     
     /**
      Opens a dialog for the user to find and pick the chat database.
      
-     Due to app sandboxing, we have to prompt the user to manually pick the chat.db file;
+     Due to app sandboxing, we have to prompt the user to manually pick the `chat.db` file;
      we can't just go grab it.  I guess this makes sense security-wise. 🤷🏻‍♂️
      
-     - Returns: A URL with the locaiton of the selected database file, or `nil` if none.
+     - Returns: A URL with the location of the selected database file, or `nil` if none.
      */
-    func promtForChatDb() -> URL? {
+    func promptForChatDb() -> URL? {
         
         let openPanel = NSOpenPanel();
         
@@ -32,8 +32,8 @@ struct ChatDbFinder {
         openPanel.isExtensionHidden = false
         openPanel.canCreateDirectories = false
         openPanel.allowedContentTypes = [UTType(filenameExtension: ".db"),
-                                      UTType(filenameExtension: ".sqlite"),
-                                      UTType(filenameExtension: ".sqlite3e")].compactMap{$0}
+                                         UTType(filenameExtension: ".sqlite"),
+                                         UTType(filenameExtension: ".sqlite3e")].compactMap{$0}
         openPanel.allowsOtherFileTypes = false
         
         if (openPanel.runModal() ==  NSApplication.ModalResponse.OK) {

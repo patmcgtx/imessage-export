@@ -8,14 +8,14 @@
 import Foundation
 import SQLite
 
-/// Reads a chata database and returns information about it.
+/// Reads a chat database and returns information about it.
 struct ChatReader {
     
     private var db: Connection?
     
     /**
-     Creates a chat database reader for the give databse path.
-     - Parameter dbPath: A path to the chat database to read.
+     Creates a chat database reader for the give database path.
+     - Parameter dbPath: A path to the chat database.
      - Returns: A chat reader instance _or_ `nil` if the database can't be read.
      */
     init?(dbPath: String) {
@@ -28,7 +28,7 @@ struct ChatReader {
     }
     
     /**
-     The total number of messages in the chat database
+     The total number of messages in the chat database.
      */
     var numMessages: Swift.Result<Int, Error> {
         do {
