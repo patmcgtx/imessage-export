@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		69232E86281C4D9A00F3D509 /* ChatDbSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDbSelector.swift; sourceTree = "<group>"; };
+		6969EB67281C89EC00461BAC /* iMessageBackupDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackupDebug.entitlements; sourceTree = "<group>"; };
 		69CCB843281B7C6100C98DD2 /* iMessageBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB846281B7C6100C98DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CCB848281B7C6100C98DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		69CCB845281B7C6100C98DD2 /* iMessageBackup */ = {
 			isa = PBXGroup;
 			children = (
+				6969EB67281C89EC00461BAC /* iMessageBackupDebug.entitlements */,
 				69232E85281C4D8400F3D509 /* UI */,
 				69E68557281C1564001E000B /* ChatDb */,
 				69CCB846281B7C6100C98DD2 /* AppDelegate.swift */,
@@ -452,7 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = iMessageBackup/iMessageBackup.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iMessageBackup/iMessageBackupDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

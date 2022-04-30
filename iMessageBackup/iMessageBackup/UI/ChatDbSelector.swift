@@ -22,9 +22,9 @@ struct ChatDbSelector {
         dialog.showsHiddenFiles        = true;
         dialog.allowsMultipleSelection = false;
         dialog.canChooseDirectories = false;
+        dialog.resolvesAliases = true
         //        dialog.allowedFileTypes = ...
         //        dialog.allowedContentTypes = ...
-        // TODO patmcg start out at ~/Library/Messages/chat.db?
         dialog.isExtensionHidden = false
         dialog.canCreateDirectories = false
         

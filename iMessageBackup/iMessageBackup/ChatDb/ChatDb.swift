@@ -28,12 +28,13 @@ struct ChatDb {
     // TODO patmcg doc
     var numMessages: Int {
         do {
-            let messages = Table("messag")
-            let count = try self.db?.scalar(messages.count)
-            return count ?? -1
+            let messages = Table("message")
+            let text = Expression<String>("text")
+            let count = try db?.scalar(messages.select(text.count)) ?? -1
+            return count
         } catch {
             print(error)
-            return -1
+            return -2
         }
     }
     
