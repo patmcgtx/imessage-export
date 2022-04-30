@@ -8,13 +8,13 @@
 import Foundation
 import SQLite
 
-/// Reads a chat database and returns information about it.
+/// Reads a chat database and supplies information about it.
 struct ChatReader {
     
     private var db: Connection?
     
     /**
-     Creates a chat database reader for the give database path.
+     Creates a chat database reader for the given database path.
      - Parameter dbPath: A path to the chat database.
      - Returns: A chat reader instance _or_ `nil` if the database can't be read.
      */
