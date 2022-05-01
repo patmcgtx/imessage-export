@@ -726,6 +726,14 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-vg-iCB" userLabel="Step 1 msg">
+                                <rect key="frame" x="28" y="146" width="156" height="17"/>
+                                <textFieldCell key="cell" title="Select export options." allowsEditingTextAttributes="YES" id="s1z-ln-qHl">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-Lg-gYu" userLabel="Step 1 label">
                                 <rect key="frame" x="28" y="227" width="156" height="19"/>
                                 <textFieldCell key="cell" title="Step 1" allowsEditingTextAttributes="YES" id="nx9-Er-ZKA">
@@ -769,8 +777,17 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cpV-jb-neX" userLabel="Step 2 label">
+                                <rect key="frame" x="28" y="165" width="156" height="21"/>
+                                <textFieldCell key="cell" title="Step 2" allowsEditingTextAttributes="YES" id="ULC-VV-C9s">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="cpV-jb-neX" firstAttribute="trailing" secondItem="Ibc-vg-iCB" secondAttribute="trailing" id="0pn-9k-DPz"/>
                             <constraint firstItem="Fuo-Ni-eFF" firstAttribute="centerY" secondItem="rWk-PS-3a9" secondAttribute="centerY" id="1Sy-wg-3se"/>
                             <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="7Cj-3N-HFa"/>
                             <constraint firstItem="w1T-Lg-gYu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="7hQ-CC-Kcm"/>
@@ -778,19 +795,25 @@
                             <constraint firstItem="6em-LA-7EN" firstAttribute="trailing" secondItem="dg6-O6-cRD" secondAttribute="trailing" id="8PD-Pb-erx"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="8dR-Bw-BUw"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="trailing" secondItem="6em-LA-7EN" secondAttribute="trailing" id="HKW-en-Wpf"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="leading" secondItem="Ibc-vg-iCB" secondAttribute="trailing" constant="24" id="Iqk-hr-1Ex"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="leading" id="Jj8-qP-EW0"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="trailing" secondItem="lMI-nA-b5T" secondAttribute="trailing" id="L7C-g0-4Zl"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="24" id="MVU-uj-2l7"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="trailing" secondItem="w1T-Lg-gYu" secondAttribute="trailing" id="NAr-gN-vW6"/>
+                            <constraint firstItem="Ibc-vg-iCB" firstAttribute="leading" secondItem="cpV-jb-neX" secondAttribute="leading" id="PSn-c2-ljI"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="trailing" constant="24" id="QGm-Ab-icD"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="centerY" secondItem="Ibc-vg-iCB" secondAttribute="centerY" id="SDg-Qt-vP2"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="RhH-U3-WH9" secondAttribute="centerY" id="T6i-fo-Qk2"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TJY-na-s1l"/>
+                            <constraint firstItem="cpV-jb-neX" firstAttribute="top" secondItem="RhH-U3-WH9" secondAttribute="bottom" constant="16" id="Tus-H8-XUB"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="top" secondItem="dg6-O6-cRD" secondAttribute="bottom" constant="36" id="UpO-E0-ce5"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="leading" secondItem="6em-LA-7EN" secondAttribute="leading" id="ZYu-L3-oRV"/>
                             <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="bSx-9e-NgR"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="top" secondItem="6em-LA-7EN" secondAttribute="bottom" constant="36" id="eUI-H0-X7h"/>
+                            <constraint firstItem="Ibc-vg-iCB" firstAttribute="top" secondItem="cpV-jb-neX" secondAttribute="bottom" constant="2" id="hgj-N9-6Mr"/>
+                            <constraint firstItem="Ibc-vg-iCB" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="jn6-3U-KAp"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="oIF-mo-4K6"/>
-                            <constraint firstItem="dg6-O6-cRD" firstAttribute="top" secondItem="lMI-nA-b5T" secondAttribute="bottom" constant="36" id="pYV-yd-ZGY"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lMI-nA-b5T" secondAttribute="bottom" constant="36" id="pYV-yd-ZGY"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="leading" secondItem="dg6-O6-cRD" secondAttribute="leading" id="ra9-vs-OpZ"/>
                             <constraint firstItem="Fuo-Ni-eFF" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="trailing" priority="750" constant="24" id="z2j-MC-Wqj"/>
                         </constraints>
