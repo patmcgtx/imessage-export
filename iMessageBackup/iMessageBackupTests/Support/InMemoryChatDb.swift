@@ -12,13 +12,8 @@ import SQLite
 struct InMemoryChatDb {
     
     private(set) var connection: Connection? = nil
-    
-    // TODO patmcg move these to a common area to be reused with the main app
-    private let chatsTable = Table("chat")
-    private let messagesTable = Table("message")
-    private let idColumn = Expression<Int>("ROWID")
-    private let guidColumn = Expression<String>("guid")
-    private let textColumn = Expression<String>("text")
+    private let chatTable = ChatSchema.ChatTable()
+    private let messageTable = ChatSchema.MessageTable()
 
     /// Creates an empty in-memory chat database
     init() throws {
@@ -26,15 +21,15 @@ struct InMemoryChatDb {
         // In-memory database
         self.connection = try Connection()
         
-        try self.connection?.run(self.chatsTable.create { table in
-            table.column(self.idColumn, primaryKey: true)
-            table.column(self.guidColumn, unique: true)
+        try self.connection?.run(chatTable.table.create { table in
+            table.column(chatTable.idColumn, primaryKey: true)
+            table.column(chatTable.guidColumn, unique: true)
         })
         
-        try self.connection?.run(self.messagesTable.create { table in
-            table.column(self.idColumn, primaryKey: true)
-            table.column(self.guidColumn, unique: true)
-            table.column(self.textColumn)
+        try self.connection?.run(messageTable.table.create { table in
+            table.column(messageTable.idColumn, primaryKey: true)
+            table.column(messageTable.guidColumn, unique: true)
+            table.column(messageTable.textColumn)
         })
     }
     
@@ -42,17 +37,17 @@ struct InMemoryChatDb {
     
     /// Inserts a chat row into this database
     func insert(chat: Chat) throws {
-        try self.connection?.run(self.chatsTable.insert(
-            self.idColumn <- chat.id,
-            self.guidColumn <- chat.guid))
+        try self.connection?.run(self.chatTable.table.insert(
+            self.chatTable.idColumn <- chat.id,
+            self.chatTable.guidColumn <- chat.guid))
     }
 
     /// Inserts a message row into this database
     func insert(message: Message) throws {
-        try self.connection?.run(self.messagesTable.insert(
-            self.idColumn <- message.id,
-            self.guidColumn <- message.guid,
-            self.textColumn <- message.text))
+        try self.connection?.run(self.messageTable.table.insert(
+            self.messageTable.idColumn <- message.id,
+            self.messageTable.guidColumn <- message.guid,
+            self.messageTable.textColumn <- message.text))
     }
 
     // MARK: - Bulk insert functions

@@ -12,7 +12,9 @@ import SQLite
 struct ChatReader {
     
     private var db: Connection?
-    
+    private let chatTable = ChatSchema.ChatTable()
+    private let messageTable = ChatSchema.MessageTable()
+
     /**
      Creates a chat database reader for the given database path.
      - Parameter dbPath: A path to the chat database.
@@ -34,14 +36,8 @@ struct ChatReader {
     /// Counts metrics from the chat database.
     var metrics: Swift.Result<ChatMetrics, Error> {
         do {
-            // TODO patmcg abstract these tables in a way I can reuse and test them
-            let chats = Table("chat")
-            let guid = Expression<String>("guid")
-            let numChats = try db?.scalar(chats.select(guid.count)) ?? -1
-            
-            let messages = Table("message")
-            let numMessages = try db?.scalar(messages.select(guid.count)) ?? -1
-
+            let numChats = try db?.scalar(self.chatTable.table.select(self.chatTable.guidColumn.count)) ?? -1
+            let numMessages = try db?.scalar(self.messageTable.table.select(self.messageTable.guidColumn.count)) ?? -1
             return .success(ChatMetrics(numChats: numChats, numMessages: numMessages))
         } catch {
             return .failure(error)

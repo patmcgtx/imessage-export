@@ -7,6 +7,8 @@
 
 import Cocoa
 
+// TODO patmcg eventually re-do this in SwiftUI
+
 class ViewController: NSViewController {
     
     // MARK: - Outlets
