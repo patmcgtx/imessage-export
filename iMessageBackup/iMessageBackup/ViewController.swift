@@ -13,7 +13,6 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var findDbStatusLabel: NSTextField!
     @IBOutlet weak var findDbThumbsUp: NSImageView!
-    
     @IBOutlet weak var exportOptionsButton: NSButton!
     @IBOutlet weak var exportOptionsThumbsUp: NSImageView!
     @IBOutlet weak var exportOptionsStatusLabel: NSTextField!

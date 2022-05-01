@@ -26,9 +26,15 @@ struct ChatReader {
         }
     }
     
+    /// Creates a chat reader for the given database connection
+    init(db: Connection) {
+        self.db = db
+    }
+    
     /// Counts metrics from the chat database.
     var metrics: Swift.Result<ChatMetrics, Error> {
         do {
+            // TODO patmcg abstract these tables in a way I can reuse and test them
             let chats = Table("chat")
             let guid = Expression<String>("guid")
             let numChats = try db?.scalar(chats.select(guid.count)) ?? -1

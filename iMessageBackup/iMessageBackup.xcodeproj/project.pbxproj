@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		69232E87281C4D9A00F3D509 /* ChatDbFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69232E86281C4D9A00F3D509 /* ChatDbFinder.swift */; };
 		698FBD1E281DA77600E14035 /* ChatMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD1D281DA77600E14035 /* ChatMetrics.swift */; };
+		698FBD20281ED6C200E14035 /* ChatReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */; };
 		69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB846281B7C6100C98DD2 /* AppDelegate.swift */; };
 		69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB848281B7C6100C98DD2 /* ViewController.swift */; };
 		69CCB84E281B7C6300C98DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84D281B7C6300C98DD2 /* Assets.xcassets */; };
 		69CCB851281B7C6300C98DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84F281B7C6300C98DD2 /* Main.storyboard */; };
-		69CCB85C281B7C6300C98DD2 /* iMessageBackupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */; };
 		69CCB866281B7C6300C98DD2 /* iMessageBackupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */; };
 		69CCB868281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */; };
 		69E68556281C1471001E000B /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 69E68555281C1471001E000B /* SQLite */; };
@@ -41,6 +41,7 @@
 		69232E86281C4D9A00F3D509 /* ChatDbFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDbFinder.swift; sourceTree = "<group>"; };
 		6969EB67281C89EC00461BAC /* iMessageBackupDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackupDebug.entitlements; sourceTree = "<group>"; };
 		698FBD1D281DA77600E14035 /* ChatMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMetrics.swift; sourceTree = "<group>"; };
+		698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReaderTests.swift; sourceTree = "<group>"; };
 		69CCB843281B7C6100C98DD2 /* iMessageBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB846281B7C6100C98DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CCB848281B7C6100C98DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		69CCB850281B7C6300C98DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackup.entitlements; sourceTree = "<group>"; };
 		69CCB857281B7C6300C98DD2 /* iMessageBackupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessageBackupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupTests.swift; sourceTree = "<group>"; };
 		69CCB861281B7C6300C98DD2 /* iMessageBackupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessageBackupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB865281B7C6300C98DD2 /* iMessageBackupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupUITests.swift; sourceTree = "<group>"; };
 		69CCB867281B7C6300C98DD2 /* iMessageBackupUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBackupUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		69CCB85A281B7C6300C98DD2 /* iMessageBackupTests */ = {
 			isa = PBXGroup;
 			children = (
-				69CCB85B281B7C6300C98DD2 /* iMessageBackupTests.swift */,
+				698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */,
 			);
 			path = iMessageBackupTests;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69CCB85C281B7C6300C98DD2 /* iMessageBackupTests.swift in Sources */,
+				698FBD20281ED6C200E14035 /* ChatReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
