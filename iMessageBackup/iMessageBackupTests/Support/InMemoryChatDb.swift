@@ -56,13 +56,19 @@ struct InMemoryChatDb {
     }
 
     // MARK: - Bulk insert functions
-    
-    func insertBulkChats(count: Int) throws {
-        // TODO patmcg find a fancy functional way to create and insert x Chats
+        
+    func insertChats(count: Int) throws {
+        let chats = Array(1...count).map { Chat(id: $0, guid: "chat\($0)") }
+        for chat in chats {
+            try self.insert(chat: chat)
+        }
     }
 
-    func insertBulkMessages(count: Int) throws {
-        // TODO patmcg find a fancy functional way to create and insert x Messages
+    func insertMessages(count: Int) throws {
+        let messages = Array(1...count).map { Message(id: $0, guid: "message\($0)", text: "Message $0") }
+        for message in messages {
+            try self.insert(message: message)
+        }
     }
 
 }
