@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Info for reporting on the chat database
+/// Info for reporting on the chat database as a whole
 struct ChatMetrics {
     let numChats: Int
     let numMessages: Int

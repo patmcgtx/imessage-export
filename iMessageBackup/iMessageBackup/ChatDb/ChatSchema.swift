@@ -7,12 +7,12 @@
 
 import SQLite
 
-/// TODO patmcg
+/// Provides an SQLite instance of a table
 protocol SQLiteTable {
     var table: Table { get }
 }
 
-/// TODO patmcg
+/// The schema for the chat database
 struct ChatSchema {
         
     struct ChatTable: SQLiteTable {

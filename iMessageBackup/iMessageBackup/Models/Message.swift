@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Represents a single chat message
+/// Represents a chat message
 struct Message {
     let id: Int
     let guid: String
