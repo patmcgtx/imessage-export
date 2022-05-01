@@ -34,9 +34,21 @@ class ViewController: NSViewController {
     @IBOutlet weak var findDbStatusLabel: NSTextField!
     @IBOutlet weak var findDbThumbsUp: NSImageView!
     
+    @IBOutlet weak var exportOptionsButton: NSButton!
+    @IBOutlet weak var exportOptionsThumbsUp: NSImageView!
+    @IBOutlet weak var exportOptionsStatusLabel: NSTextField!
+    
+    // MARK: - Private helpers
+
     private func updateFindDbStatus(_ status: String, didSucceed: Bool) {
+        
         self.findDbStatusLabel.stringValue = status
+        self.findDbStatusLabel.isHidden = false
         self.findDbThumbsUp.isHidden = !didSucceed
+
+        if didSucceed {
+            self.exportOptionsButton.isEnabled = true
+        }
     }
 
     // MARK: - Data flow
