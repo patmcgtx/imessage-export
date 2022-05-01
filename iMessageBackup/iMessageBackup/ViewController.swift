@@ -8,11 +8,16 @@
 import Cocoa
 
 class ViewController: NSViewController {
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var findDbStatusLabel: NSTextField!
+    @IBOutlet weak var findDbThumbsUp: NSImageView!
+    
+    @IBOutlet weak var exportOptionsButton: NSButton!
+    @IBOutlet weak var exportOptionsThumbsUp: NSImageView!
+    @IBOutlet weak var exportOptionsStatusLabel: NSTextField!
+
     // MARK: - Actions
     
     @IBAction func findChatDb(_ sender: Any) {
@@ -29,15 +34,12 @@ class ViewController: NSViewController {
         }
     }
     
-    // MARK: - Outlets
+    // MARK: - View controller lifecycle
     
-    @IBOutlet weak var findDbStatusLabel: NSTextField!
-    @IBOutlet weak var findDbThumbsUp: NSImageView!
-    
-    @IBOutlet weak var exportOptionsButton: NSButton!
-    @IBOutlet weak var exportOptionsThumbsUp: NSImageView!
-    @IBOutlet weak var exportOptionsStatusLabel: NSTextField!
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     // MARK: - Private helpers
 
     private func updateFindDbStatus(_ status: String, didSucceed: Bool) {

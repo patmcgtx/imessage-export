@@ -1,5 +1,5 @@
 //
-//  ChatDb.swift
+//  ChatReader.swift
 //  iMessageBackup
 //
 //  Created by Patrick McGonigle on 4/29/22.
@@ -22,7 +22,6 @@ struct ChatReader {
         do {
             self.db = try Connection(dbPath, readonly: true)
         } catch {
-            print(error) // TODO patmcg add error handling
             return nil
         }
     }
