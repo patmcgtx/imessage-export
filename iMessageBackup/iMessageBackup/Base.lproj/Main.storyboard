@@ -710,7 +710,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
+                            <textField hidden="YES" verticalHuggingPriority="749" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
                                 <rect key="frame" x="324" y="265" width="134" height="72"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells the status of the loaded database." id="C9d-hB-qOW">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -718,7 +718,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-lF-gi9" userLabel="Step 2 status">
+                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-lF-gi9" userLabel="Step 2 status">
                                 <rect key="frame" x="324" y="209" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells about the various options selected." id="5gJ-Sl-gcF">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -825,7 +825,7 @@
                                 <rect key="frame" x="298" y="156.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="LfU-D0-7Ij"/>
                             </imageView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-NS-gtn" userLabel="Step 3 status">
+                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-NS-gtn" userLabel="Step 3 status">
                                 <rect key="frame" x="324" y="141" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells about the selected save location." id="gVS-fM-gmu">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -845,7 +845,7 @@
                                 <rect key="frame" x="298" y="88.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="q1S-LX-nxE"/>
                             </imageView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="bia-pJ-JyC" userLabel="Step 3 status">
+                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="bia-pJ-JyC" userLabel="Step 3 status">
                                 <rect key="frame" x="324" y="73" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells all about the saved backup." id="dfb-7j-fQh">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -918,6 +918,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="exportOptionsButton" destination="dg6-O6-cRD" id="Isd-Pi-jCl"/>
+                        <outlet property="exportOptionsStatusLabel" destination="xDH-lF-gi9" id="yRx-EI-Bny"/>
+                        <outlet property="exportOptionsThumbsUp" destination="Ybd-0X-FEp" id="ymM-cu-VrM"/>
                         <outlet property="findDbStatusLabel" destination="rWk-PS-3a9" id="5ep-mj-TBH"/>
                         <outlet property="findDbThumbsUp" destination="Fuo-Ni-eFF" id="hrJ-V9-fyO"/>
                     </connections>
