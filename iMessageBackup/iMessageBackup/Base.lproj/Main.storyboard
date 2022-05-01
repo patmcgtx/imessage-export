@@ -688,7 +688,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="360"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="iMessageBackup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
-                                <rect key="frame" x="324" y="187" width="134" height="48"/>
+                            <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
+                                <rect key="frame" x="324" y="265" width="134" height="72"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells the status of the loaded database." id="C9d-hB-qOW">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -719,7 +719,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-lF-gi9" userLabel="Step 2 status">
-                                <rect key="frame" x="324" y="131" width="134" height="48"/>
+                                <rect key="frame" x="324" y="209" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells about the various options selected." id="5gJ-Sl-gcF">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -727,7 +727,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhH-U3-WH9" userLabel="Step 1 msg">
-                                <rect key="frame" x="28" y="202" width="156" height="17"/>
+                                <rect key="frame" x="28" y="292" width="156" height="17"/>
                                 <textFieldCell key="cell" title="Find the chat database." allowsEditingTextAttributes="YES" id="2Hf-WG-jzF">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -735,7 +735,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-vg-iCB" userLabel="Step 2 msg">
-                                <rect key="frame" x="28" y="146" width="156" height="17"/>
+                                <rect key="frame" x="28" y="224" width="156" height="17"/>
                                 <textFieldCell key="cell" title="Select export options." allowsEditingTextAttributes="YES" id="s1z-ln-qHl">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -743,7 +743,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-e6-XcT" userLabel="Step 3 msg">
-                                <rect key="frame" x="28" y="90" width="156" height="17"/>
+                                <rect key="frame" x="28" y="156" width="156" height="17"/>
                                 <textFieldCell key="cell" title="Select save location." allowsEditingTextAttributes="YES" id="aKd-eY-KxA">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -751,7 +751,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-Lg-gYu" userLabel="Step 1 label">
-                                <rect key="frame" x="28" y="227" width="156" height="19"/>
+                                <rect key="frame" x="28" y="317" width="156" height="19"/>
                                 <textFieldCell key="cell" title="Step 1" allowsEditingTextAttributes="YES" id="nx9-Er-ZKA">
                                     <font key="font" metaFont="systemBold" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -759,7 +759,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="cpV-jb-neX" userLabel="Step 2 label">
-                                <rect key="frame" x="28" y="171" width="156" height="19"/>
+                                <rect key="frame" x="28" y="249" width="156" height="19"/>
                                 <textFieldCell key="cell" title="Step 2" allowsEditingTextAttributes="YES" id="ULC-VV-C9s">
                                     <font key="font" metaFont="systemBold" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -767,7 +767,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZZu-nx-JOG" userLabel="Step 3 label">
-                                <rect key="frame" x="28" y="115" width="156" height="19"/>
+                                <rect key="frame" x="28" y="181" width="156" height="19"/>
                                 <textFieldCell key="cell" title="Step 3" allowsEditingTextAttributes="YES" id="24s-Ap-sOv">
                                     <font key="font" metaFont="systemBold" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -775,7 +775,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-nA-b5T" userLabel="Find btn">
-                                <rect key="frame" x="199" y="194" width="82" height="32"/>
+                                <rect key="frame" x="199" y="284" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Find" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rU5-iT-nf0" userLabel="Find btn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -785,42 +785,58 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Ni-eFF" userLabel="Step 1 thumbs up">
-                                <rect key="frame" x="298" y="202.5" width="16.5" height="17"/>
+                                <rect key="frame" x="298" y="292.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="ffJ-bQ-u1g"/>
                             </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-O6-cRD" userLabel="Options btn">
-                                <rect key="frame" x="199" y="138" width="82" height="32"/>
+                                <rect key="frame" x="199" y="216" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Options" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1wx-uK-2gG" userLabel="Options btn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6em-LA-7EN" userLabel="Select btn">
-                                <rect key="frame" x="199" y="82" width="82" height="32"/>
+                                <rect key="frame" x="199" y="148" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y8q-f8-YyI" userLabel="Select btn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qp4-mr-3Zx" userLabel="Run btn">
-                                <rect key="frame" x="199" y="26" width="82" height="32"/>
+                                <rect key="frame" x="199" y="80" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Run" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dck-r9-vJ1" userLabel="Run btn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ybd-0X-FEp" userLabel="Step 2 thumbs up">
-                                <rect key="frame" x="298" y="146.5" width="16.5" height="17"/>
+                                <rect key="frame" x="298" y="224.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="SET-5d-LJw"/>
                             </imageView>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9e9-tR-cbh" userLabel="Step 3 thumbs up">
-                                <rect key="frame" x="298" y="90.5" width="16.5" height="17"/>
+                                <rect key="frame" x="298" y="156.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="LfU-D0-7Ij"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-NS-gtn" userLabel="Step 3 status">
-                                <rect key="frame" x="324" y="75" width="134" height="48"/>
+                                <rect key="frame" x="324" y="141" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells about the selected save location." id="gVS-fM-gmu">
                                     <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPC-JB-ykT" userLabel="Step 4 msg">
+                                <rect key="frame" x="28" y="88" width="156" height="17"/>
+                                <textFieldCell key="cell" title="Save your backup." allowsEditingTextAttributes="YES" id="neF-4f-Ovk">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-qh-oNW" userLabel="Step 4 label">
+                                <rect key="frame" x="28" y="113" width="156" height="19"/>
+                                <textFieldCell key="cell" title="Step 4" allowsEditingTextAttributes="YES" id="rYM-Rg-GtC">
+                                    <font key="font" metaFont="systemBold" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -838,9 +854,11 @@
                             <constraint firstItem="6em-LA-7EN" firstAttribute="trailing" secondItem="dg6-O6-cRD" secondAttribute="trailing" id="8PD-Pb-erx"/>
                             <constraint firstItem="dX3-e6-XcT" firstAttribute="leading" secondItem="ZZu-nx-JOG" secondAttribute="leading" id="8cy-lD-io9"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="8dR-Bw-BUw"/>
+                            <constraint firstItem="3gh-qh-oNW" firstAttribute="leading" secondItem="dX3-e6-XcT" secondAttribute="leading" id="CMm-an-mZX"/>
                             <constraint firstItem="xDH-lF-gi9" firstAttribute="leading" secondItem="rWk-PS-3a9" secondAttribute="leading" id="Djv-hZ-55z"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="centerY" secondItem="dX3-e6-XcT" secondAttribute="centerY" id="FOW-lB-sTf"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="trailing" secondItem="6em-LA-7EN" secondAttribute="trailing" id="HKW-en-Wpf"/>
+                            <constraint firstItem="fPC-JB-ykT" firstAttribute="trailing" secondItem="3gh-qh-oNW" secondAttribute="trailing" id="HeH-Rq-B9q"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="leading" secondItem="Ibc-vg-iCB" secondAttribute="trailing" constant="24" id="Iqk-hr-1Ex"/>
                             <constraint firstItem="dX3-e6-XcT" firstAttribute="trailing" secondItem="ZZu-nx-JOG" secondAttribute="trailing" id="JXI-gM-qYU"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="leading" id="Jj8-qP-EW0"/>
@@ -850,26 +868,32 @@
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="trailing" secondItem="w1T-Lg-gYu" secondAttribute="trailing" id="NAr-gN-vW6"/>
                             <constraint firstItem="Ibc-vg-iCB" firstAttribute="leading" secondItem="cpV-jb-neX" secondAttribute="leading" id="PSn-c2-ljI"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="trailing" constant="24" id="QGm-Ab-icD"/>
+                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="leading" secondItem="fPC-JB-ykT" secondAttribute="trailing" constant="24" id="R2n-U6-e5N"/>
                             <constraint firstItem="9e9-tR-cbh" firstAttribute="centerY" secondItem="6em-LA-7EN" secondAttribute="centerY" id="RLu-zn-HXg"/>
                             <constraint firstItem="Ybd-0X-FEp" firstAttribute="centerX" secondItem="Fuo-Ni-eFF" secondAttribute="centerX" id="RZv-9C-J4D"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="centerY" secondItem="Ibc-vg-iCB" secondAttribute="centerY" id="SDg-Qt-vP2"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="RhH-U3-WH9" secondAttribute="centerY" id="T6i-fo-Qk2"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TJY-na-s1l"/>
                             <constraint firstItem="cpV-jb-neX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RhH-U3-WH9" secondAttribute="bottom" constant="8" symbolic="YES" id="Tus-H8-XUB"/>
-                            <constraint firstItem="6em-LA-7EN" firstAttribute="top" secondItem="dg6-O6-cRD" secondAttribute="bottom" constant="36" id="UpO-E0-ce5"/>
+                            <constraint firstItem="6em-LA-7EN" firstAttribute="top" secondItem="dg6-O6-cRD" secondAttribute="bottom" constant="48" id="UpO-E0-ce5"/>
+                            <constraint firstItem="ZZu-nx-JOG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ibc-vg-iCB" secondAttribute="bottom" constant="8" symbolic="YES" id="VxK-0M-iGx"/>
+                            <constraint firstItem="3gh-qh-oNW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dX3-e6-XcT" secondAttribute="bottom" constant="8" symbolic="YES" id="XOC-8e-VH2"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="leading" secondItem="6em-LA-7EN" secondAttribute="leading" id="ZYu-L3-oRV"/>
                             <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="bSx-9e-NgR"/>
-                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="top" secondItem="6em-LA-7EN" secondAttribute="bottom" constant="36" id="eUI-H0-X7h"/>
+                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="top" secondItem="6em-LA-7EN" secondAttribute="bottom" constant="48" id="eUI-H0-X7h"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="leading" secondItem="dX3-e6-XcT" secondAttribute="trailing" constant="24" id="fQd-qt-Xl1"/>
                             <constraint firstItem="xDH-lF-gi9" firstAttribute="top" secondItem="rWk-PS-3a9" secondAttribute="bottom" constant="8" symbolic="YES" id="g9j-ji-yr2"/>
                             <constraint firstItem="dX3-e6-XcT" firstAttribute="top" secondItem="ZZu-nx-JOG" secondAttribute="bottom" constant="8" symbolic="YES" id="gya-0n-Hv0"/>
                             <constraint firstItem="J3C-NS-gtn" firstAttribute="centerY" secondItem="9e9-tR-cbh" secondAttribute="centerY" id="haI-mL-KVF"/>
                             <constraint firstItem="Ibc-vg-iCB" firstAttribute="top" secondItem="cpV-jb-neX" secondAttribute="bottom" constant="8" symbolic="YES" id="hgj-N9-6Mr"/>
+                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="centerY" secondItem="fPC-JB-ykT" secondAttribute="centerY" id="hth-xb-OOV"/>
                             <constraint firstItem="Ibc-vg-iCB" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="jn6-3U-KAp"/>
+                            <constraint firstItem="fPC-JB-ykT" firstAttribute="leading" secondItem="3gh-qh-oNW" secondAttribute="leading" id="mOc-Vq-QLj"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="oIF-mo-4K6"/>
                             <constraint firstItem="9e9-tR-cbh" firstAttribute="centerX" secondItem="Ybd-0X-FEp" secondAttribute="centerX" id="oqH-9a-yIM"/>
-                            <constraint firstItem="dg6-O6-cRD" firstAttribute="top" secondItem="lMI-nA-b5T" secondAttribute="bottom" constant="36" id="pYV-yd-ZGY"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="top" secondItem="lMI-nA-b5T" secondAttribute="bottom" constant="48" id="pYV-yd-ZGY"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="leading" secondItem="dg6-O6-cRD" secondAttribute="leading" id="ra9-vs-OpZ"/>
+                            <constraint firstItem="fPC-JB-ykT" firstAttribute="top" secondItem="3gh-qh-oNW" secondAttribute="bottom" constant="8" symbolic="YES" id="rrb-Me-ABV"/>
                             <constraint firstItem="Ybd-0X-FEp" firstAttribute="centerY" secondItem="dg6-O6-cRD" secondAttribute="centerY" id="vsU-xU-rWP"/>
                             <constraint firstItem="ZZu-nx-JOG" firstAttribute="leading" secondItem="Ibc-vg-iCB" secondAttribute="leading" id="xzI-Rn-qbL"/>
                             <constraint firstItem="Fuo-Ni-eFF" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="trailing" priority="750" constant="24" id="z2j-MC-Wqj"/>
