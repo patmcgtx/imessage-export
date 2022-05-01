@@ -10,43 +10,33 @@ import SQLite
 @testable import iMessageBackup
 
 class ChatReaderTests: XCTestCase {
-
-    private var populatedInMemoryDb: InMemoryChatDb? {
+    
+    private func populatedInMemoryDb() throws -> InMemoryChatDb {
         
-        var inMemoryDb: InMemoryChatDb? = nil
+        let inMemoryDb = try InMemoryChatDb()
         
-        do {
-            inMemoryDb = try InMemoryChatDb()
-
-            try inMemoryDb?.insert(chat: Chat(id: 0, guid: "chat0"))
-            try inMemoryDb?.insert(chat: Chat(id: 1, guid: "chat1"))
-            try inMemoryDb?.insert(chat: Chat(id: 2, guid: "chat2"))
-            
-            try inMemoryDb?.insert(message: Message(id: 0, guid: "message0)", text: "Message 0"))
-            try inMemoryDb?.insert(message: Message(id: 1, guid: "message1)", text: "Message 1"))
-            try inMemoryDb?.insert(message: Message(id: 2, guid: "message2)", text: "Message 2"))
-            
-        } catch {
-            XCTFail("In-memory database error: \(error.localizedDescription)")
-        }
+        try inMemoryDb.insert(chat: Chat(id: 0, guid: "chat0"))
+        try inMemoryDb.insert(chat: Chat(id: 1, guid: "chat1"))
+        try inMemoryDb.insert(chat: Chat(id: 2, guid: "chat2"))
+        
+        try inMemoryDb.insert(message: Message(id: 0, guid: "message0)", text: "Message 0"))
+        try inMemoryDb.insert(message: Message(id: 1, guid: "message1)", text: "Message 1"))
+        try inMemoryDb.insert(message: Message(id: 2, guid: "message2)", text: "Message 2"))
         
         return inMemoryDb
     }
     
     func testMetrics() throws {
         
-        guard let inMemoryDb = self.populatedInMemoryDb else {
-            return XCTFail("Failed to get in-memory database")
-        }
-
+        let inMemoryDb = try self.populatedInMemoryDb()
+        
         guard let dbConnection = inMemoryDb.connection else {
             return XCTFail("Failed to get in-memory database connection")
         }
-
-        let reader = ChatReader(db: dbConnection)
-        let metrics = reader.metrics
         
-        switch metrics {
+        let reader = ChatReader(db: dbConnection)
+        
+        switch reader.metrics {
         case .success(let result):
             XCTAssertEqual(result.numChats, 3)
             XCTAssertEqual(result.numMessages, 3)
@@ -54,5 +44,5 @@ class ChatReaderTests: XCTestCase {
             XCTFail("Metrics call failed")
         }
     }
-
+    
 }

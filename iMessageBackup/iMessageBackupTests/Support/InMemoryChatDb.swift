@@ -20,7 +20,7 @@ struct InMemoryChatDb {
     private let guidColumn = Expression<String>("guid")
     private let textColumn = Expression<String>("text")
 
-    /// Creates an empty in-memory version of a chat database
+    /// Creates an empty in-memory chat database
     init() throws {
         
         // In-memory database
@@ -38,11 +38,13 @@ struct InMemoryChatDb {
         })
     }
     
-    // MARK: - Update functions
+    // MARK: - Single insert functions
     
     /// Inserts a chat row into this database
     func insert(chat: Chat) throws {
-        try self.connection?.run(self.chatsTable.insert(self.idColumn <- chat.id, self.guidColumn <- chat.guid))
+        try self.connection?.run(self.chatsTable.insert(
+            self.idColumn <- chat.id,
+            self.guidColumn <- chat.guid))
     }
 
     /// Inserts a message row into this database
@@ -51,6 +53,16 @@ struct InMemoryChatDb {
             self.idColumn <- message.id,
             self.guidColumn <- message.guid,
             self.textColumn <- message.text))
+    }
+
+    // MARK: - Bulk insert functions
+    
+    func insertBulkChats(count: Int) throws {
+        // TODO patmcg find a fancy functional way to create and insert x Chats
+    }
+
+    func insertBulkMessages(count: Int) throws {
+        // TODO patmcg find a fancy functional way to create and insert x Messages
     }
 
 }
