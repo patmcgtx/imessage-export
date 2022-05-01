@@ -51,9 +51,6 @@ class ViewController: NSViewController {
         }
     }
 
-    private func updateExportOptionsStatus(_ status: String, didSucceed: Bool) {
-    }
-    
     // MARK: - Data flow
     
     override var representedObject: Any? {
