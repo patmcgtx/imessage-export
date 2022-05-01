@@ -711,8 +711,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
-                                <rect key="frame" x="313" y="203" width="4" height="16"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="left" id="C9d-hB-qOW">
+                                <rect key="frame" x="313" y="203" width="101" height="16"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" title="Status message" id="C9d-hB-qOW">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -750,19 +750,19 @@
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="0uV-Lm-lPZ"/>
-                            <constraint firstItem="Fuo-Ni-eFF" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="trailing" constant="24" id="57g-qn-tJZ"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="trailing" priority="250" constant="24" id="Dej-jC-iiK"/>
-                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="trailing" secondItem="RhH-U3-WH9" secondAttribute="trailing" id="GQZ-vB-XNn"/>
-                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="IEF-kz-1U3"/>
-                            <constraint firstItem="Fuo-Ni-eFF" firstAttribute="centerY" secondItem="rWk-PS-3a9" secondAttribute="centerY" id="Izl-Xp-vnN"/>
-                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="LJa-IC-Jk1"/>
-                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" priority="750" constant="24" id="O06-LJ-aaj"/>
-                            <constraint firstItem="lMI-nA-b5T" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="trailing" constant="24" id="VZq-cD-9JD"/>
-                            <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="Zpk-Or-Fm6"/>
-                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="i74-Tw-tZc"/>
-                            <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="mi4-Y6-BtZ"/>
-                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="RhH-U3-WH9" secondAttribute="centerY" id="uEg-gl-ieh"/>
+                            <constraint firstItem="Fuo-Ni-eFF" firstAttribute="centerY" secondItem="rWk-PS-3a9" secondAttribute="centerY" id="1Sy-wg-3se"/>
+                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="7Cj-3N-HFa"/>
+                            <constraint firstItem="w1T-Lg-gYu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="7hQ-CC-Kcm"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="trailing" priority="750" constant="24" id="7jW-Dn-cQ0"/>
+                            <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="8dR-Bw-BUw"/>
+                            <constraint firstItem="RhH-U3-WH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="24" id="MVU-uj-2l7"/>
+                            <constraint firstItem="RhH-U3-WH9" firstAttribute="trailing" secondItem="w1T-Lg-gYu" secondAttribute="trailing" id="NAr-gN-vW6"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="trailing" constant="24" id="QGm-Ab-icD"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="RhH-U3-WH9" secondAttribute="centerY" id="T6i-fo-Qk2"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TJY-na-s1l"/>
+                            <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="bSx-9e-NgR"/>
+                            <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="oIF-mo-4K6"/>
+                            <constraint firstItem="Fuo-Ni-eFF" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="trailing" priority="750" constant="24" id="z2j-MC-Wqj"/>
                         </constraints>
                     </view>
                     <connections>
