@@ -774,6 +774,14 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-qh-oNW" userLabel="Step 4 label">
+                                <rect key="frame" x="28" y="113" width="156" height="19"/>
+                                <textFieldCell key="cell" title="Step 4" allowsEditingTextAttributes="YES" id="rYM-Rg-GtC">
+                                    <font key="font" metaFont="systemBold" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-nA-b5T" userLabel="Find btn">
                                 <rect key="frame" x="199" y="284" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Find" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rU5-iT-nf0" userLabel="Find btn">
@@ -833,10 +841,14 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3gh-qh-oNW" userLabel="Step 4 label">
-                                <rect key="frame" x="28" y="113" width="156" height="19"/>
-                                <textFieldCell key="cell" title="Step 4" allowsEditingTextAttributes="YES" id="rYM-Rg-GtC">
-                                    <font key="font" metaFont="systemBold" size="16"/>
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Woo-Yv-uHt" userLabel="Step 4 thumbs up">
+                                <rect key="frame" x="298" y="88.5" width="16.5" height="17"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="q1S-LX-nxE"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="bia-pJ-JyC" userLabel="Step 3 status">
+                                <rect key="frame" x="324" y="73" width="134" height="48"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells all about the saved backup." id="dfb-7j-fQh">
+                                    <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -856,6 +868,7 @@
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="8dR-Bw-BUw"/>
                             <constraint firstItem="3gh-qh-oNW" firstAttribute="leading" secondItem="dX3-e6-XcT" secondAttribute="leading" id="CMm-an-mZX"/>
                             <constraint firstItem="xDH-lF-gi9" firstAttribute="leading" secondItem="rWk-PS-3a9" secondAttribute="leading" id="Djv-hZ-55z"/>
+                            <constraint firstItem="bia-pJ-JyC" firstAttribute="leading" secondItem="J3C-NS-gtn" secondAttribute="leading" id="Er2-uT-yO8"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="centerY" secondItem="dX3-e6-XcT" secondAttribute="centerY" id="FOW-lB-sTf"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="trailing" secondItem="6em-LA-7EN" secondAttribute="trailing" id="HKW-en-Wpf"/>
                             <constraint firstItem="fPC-JB-ykT" firstAttribute="trailing" secondItem="3gh-qh-oNW" secondAttribute="trailing" id="HeH-Rq-B9q"/>
@@ -864,6 +877,7 @@
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="leading" id="Jj8-qP-EW0"/>
                             <constraint firstItem="xDH-lF-gi9" firstAttribute="centerY" secondItem="Ybd-0X-FEp" secondAttribute="centerY" id="Kc8-jH-jvO"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="trailing" secondItem="lMI-nA-b5T" secondAttribute="trailing" id="L7C-g0-4Zl"/>
+                            <constraint firstItem="Woo-Yv-uHt" firstAttribute="centerY" secondItem="qp4-mr-3Zx" secondAttribute="centerY" id="LO2-vg-v0D"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="24" id="MVU-uj-2l7"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="trailing" secondItem="w1T-Lg-gYu" secondAttribute="trailing" id="NAr-gN-vW6"/>
                             <constraint firstItem="Ibc-vg-iCB" firstAttribute="leading" secondItem="cpV-jb-neX" secondAttribute="leading" id="PSn-c2-ljI"/>
@@ -877,11 +891,14 @@
                             <constraint firstItem="cpV-jb-neX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RhH-U3-WH9" secondAttribute="bottom" constant="8" symbolic="YES" id="Tus-H8-XUB"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="top" secondItem="dg6-O6-cRD" secondAttribute="bottom" constant="48" id="UpO-E0-ce5"/>
                             <constraint firstItem="ZZu-nx-JOG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ibc-vg-iCB" secondAttribute="bottom" constant="8" symbolic="YES" id="VxK-0M-iGx"/>
+                            <constraint firstItem="bia-pJ-JyC" firstAttribute="trailing" secondItem="J3C-NS-gtn" secondAttribute="trailing" id="X2h-e1-Ys7"/>
                             <constraint firstItem="3gh-qh-oNW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dX3-e6-XcT" secondAttribute="bottom" constant="8" symbolic="YES" id="XOC-8e-VH2"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="leading" secondItem="6em-LA-7EN" secondAttribute="leading" id="ZYu-L3-oRV"/>
                             <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="bSx-9e-NgR"/>
+                            <constraint firstItem="Woo-Yv-uHt" firstAttribute="centerX" secondItem="9e9-tR-cbh" secondAttribute="centerX" id="bmc-PJ-syV"/>
                             <constraint firstItem="qp4-mr-3Zx" firstAttribute="top" secondItem="6em-LA-7EN" secondAttribute="bottom" constant="48" id="eUI-H0-X7h"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="leading" secondItem="dX3-e6-XcT" secondAttribute="trailing" constant="24" id="fQd-qt-Xl1"/>
+                            <constraint firstItem="bia-pJ-JyC" firstAttribute="centerY" secondItem="Woo-Yv-uHt" secondAttribute="centerY" id="g2a-Ut-SqL"/>
                             <constraint firstItem="xDH-lF-gi9" firstAttribute="top" secondItem="rWk-PS-3a9" secondAttribute="bottom" constant="8" symbolic="YES" id="g9j-ji-yr2"/>
                             <constraint firstItem="dX3-e6-XcT" firstAttribute="top" secondItem="ZZu-nx-JOG" secondAttribute="bottom" constant="8" symbolic="YES" id="gya-0n-Hv0"/>
                             <constraint firstItem="J3C-NS-gtn" firstAttribute="centerY" secondItem="9e9-tR-cbh" secondAttribute="centerY" id="haI-mL-KVF"/>
@@ -892,6 +909,7 @@
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="oIF-mo-4K6"/>
                             <constraint firstItem="9e9-tR-cbh" firstAttribute="centerX" secondItem="Ybd-0X-FEp" secondAttribute="centerX" id="oqH-9a-yIM"/>
                             <constraint firstItem="dg6-O6-cRD" firstAttribute="top" secondItem="lMI-nA-b5T" secondAttribute="bottom" constant="48" id="pYV-yd-ZGY"/>
+                            <constraint firstItem="bia-pJ-JyC" firstAttribute="top" secondItem="J3C-NS-gtn" secondAttribute="bottom" constant="20" id="pd7-UY-hP0"/>
                             <constraint firstItem="6em-LA-7EN" firstAttribute="leading" secondItem="dg6-O6-cRD" secondAttribute="leading" id="ra9-vs-OpZ"/>
                             <constraint firstItem="fPC-JB-ykT" firstAttribute="top" secondItem="3gh-qh-oNW" secondAttribute="bottom" constant="8" symbolic="YES" id="rrb-Me-ABV"/>
                             <constraint firstItem="Ybd-0X-FEp" firstAttribute="centerY" secondItem="dg6-O6-cRD" secondAttribute="centerY" id="vsU-xU-rWP"/>
