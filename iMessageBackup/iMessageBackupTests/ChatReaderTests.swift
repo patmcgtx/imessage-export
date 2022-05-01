@@ -11,59 +11,39 @@ import SQLite
 
 class ChatReaderTests: XCTestCase {
 
-    private var populatedInMemoryDb: Connection? {
+    private var populatedInMemoryDb: InMemoryChatDb? {
         
-        var db: Connection? = nil
+        var inMemoryDb: InMemoryChatDb? = nil
         
         do {
-            // In-memory database
-            db = try Connection()
+            inMemoryDb = try InMemoryChatDb()
 
-            // Common columns
-            let idColumn = Expression<Int>("ROWID")
-            let guidColumn = Expression<String>("guid")
-
-            // Create the chats table
-            let chatsTable = Table("chat")
+            try inMemoryDb?.insert(chat: Chat(id: 0, guid: "chat0"))
+            try inMemoryDb?.insert(chat: Chat(id: 1, guid: "chat1"))
+            try inMemoryDb?.insert(chat: Chat(id: 2, guid: "chat2"))
             
-            try db?.run(chatsTable.create { table in
-                table.column(idColumn, primaryKey: true)
-                table.column(guidColumn, unique: true)
-            })
-
-            // Create the messages table
-            let messagesTable = Table("message")
-            let textColumn = Expression<String>("text")
-
-            try db?.run(messagesTable.create { table in
-                table.column(idColumn, primaryKey: true)
-                table.column(guidColumn, unique: true)
-                table.column(textColumn)
-            })
-
-            // TODO patmcg split out db creation and data pop
-            try db?.run(chatsTable.insert(idColumn <- 0, guidColumn <- "chat0"))
-            try db?.run(chatsTable.insert(idColumn <- 1, guidColumn <- "chat1"))
-            try db?.run(chatsTable.insert(idColumn <- 2, guidColumn <- "chat2"))
-            
-            try db?.run(messagesTable.insert(idColumn <- 0, guidColumn <- "message0", textColumn <- "Message 0"))
-            try db?.run(messagesTable.insert(idColumn <- 1, guidColumn <- "message1", textColumn <- "Message 1"))
-            try db?.run(messagesTable.insert(idColumn <- 2, guidColumn <- "message2", textColumn <- "Message 2"))
+            try inMemoryDb?.insert(message: Message(id: 0, guid: "message0)", text: "Message 0"))
+            try inMemoryDb?.insert(message: Message(id: 1, guid: "message1)", text: "Message 1"))
+            try inMemoryDb?.insert(message: Message(id: 2, guid: "message2)", text: "Message 2"))
             
         } catch {
-            XCTFail("Failed to create in-memory database")
+            XCTFail("In-memory database error: \(error.localizedDescription)")
         }
         
-        return db
+        return inMemoryDb
     }
     
     func testMetrics() throws {
         
-        guard let db = self.populatedInMemoryDb else {
-            return XCTFail("Failed to get populated in-memory database")
+        guard let inMemoryDb = self.populatedInMemoryDb else {
+            return XCTFail("Failed to get in-memory database")
         }
-        
-        let reader = ChatReader(db: db)
+
+        guard let dbConnection = inMemoryDb.connection else {
+            return XCTFail("Failed to get in-memory database connection")
+        }
+
+        let reader = ChatReader(db: dbConnection)
         let metrics = reader.metrics
         
         switch metrics {

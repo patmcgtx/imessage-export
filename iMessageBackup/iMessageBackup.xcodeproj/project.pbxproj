@@ -10,6 +10,9 @@
 		69232E87281C4D9A00F3D509 /* ChatDbFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69232E86281C4D9A00F3D509 /* ChatDbFinder.swift */; };
 		698FBD1E281DA77600E14035 /* ChatMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD1D281DA77600E14035 /* ChatMetrics.swift */; };
 		698FBD20281ED6C200E14035 /* ChatReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */; };
+		698FBD22281EE95000E14035 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD21281EE95000E14035 /* Chat.swift */; };
+		698FBD24281EE96100E14035 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD23281EE96100E14035 /* Message.swift */; };
+		698FBD27281EEA9D00E14035 /* InMemoryChatDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD26281EEA9D00E14035 /* InMemoryChatDb.swift */; };
 		69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB846281B7C6100C98DD2 /* AppDelegate.swift */; };
 		69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CCB848281B7C6100C98DD2 /* ViewController.swift */; };
 		69CCB84E281B7C6300C98DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CCB84D281B7C6300C98DD2 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		6969EB67281C89EC00461BAC /* iMessageBackupDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackupDebug.entitlements; sourceTree = "<group>"; };
 		698FBD1D281DA77600E14035 /* ChatMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMetrics.swift; sourceTree = "<group>"; };
 		698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReaderTests.swift; sourceTree = "<group>"; };
+		698FBD21281EE95000E14035 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		698FBD23281EE96100E14035 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		698FBD26281EEA9D00E14035 /* InMemoryChatDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryChatDb.swift; sourceTree = "<group>"; };
 		69CCB843281B7C6100C98DD2 /* iMessageBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CCB846281B7C6100C98DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CCB848281B7C6100C98DD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,9 +98,19 @@
 		698FBD1C281DA76500E14035 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				698FBD21281EE95000E14035 /* Chat.swift */,
+				698FBD23281EE96100E14035 /* Message.swift */,
 				698FBD1D281DA77600E14035 /* ChatMetrics.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		698FBD25281EEA8400E14035 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				698FBD26281EEA9D00E14035 /* InMemoryChatDb.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		69CCB83A281B7C6100C98DD2 = {
@@ -136,6 +152,7 @@
 		69CCB85A281B7C6300C98DD2 /* iMessageBackupTests */ = {
 			isa = PBXGroup;
 			children = (
+				698FBD25281EEA8400E14035 /* Support */,
 				698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */,
 			);
 			path = iMessageBackupTests;
@@ -295,10 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */,
+				698FBD22281EE95000E14035 /* Chat.swift in Sources */,
 				698FBD1E281DA77600E14035 /* ChatMetrics.swift in Sources */,
 				69CCB847281B7C6100C98DD2 /* AppDelegate.swift in Sources */,
 				69232E87281C4D9A00F3D509 /* ChatDbFinder.swift in Sources */,
 				69E68559281C1576001E000B /* ChatReader.swift in Sources */,
+				698FBD24281EE96100E14035 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				698FBD20281ED6C200E14035 /* ChatReaderTests.swift in Sources */,
+				698FBD27281EEA9D00E14035 /* InMemoryChatDb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
