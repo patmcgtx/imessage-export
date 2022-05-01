@@ -718,7 +718,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-lF-gi9" userLabel="Step 1 status">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="xDH-lF-gi9" userLabel="Step 2 status">
                                 <rect key="frame" x="324" y="131" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells about the various options selected." id="5gJ-Sl-gcF">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -734,7 +734,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-vg-iCB" userLabel="Step 1 msg">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-vg-iCB" userLabel="Step 2 msg">
                                 <rect key="frame" x="28" y="146" width="156" height="17"/>
                                 <textFieldCell key="cell" title="Select export options." allowsEditingTextAttributes="YES" id="s1z-ln-qHl">
                                     <font key="font" metaFont="system" size="14"/>
@@ -742,7 +742,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-e6-XcT" userLabel="Step 1 msg">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-e6-XcT" userLabel="Step 3 msg">
                                 <rect key="frame" x="28" y="90" width="156" height="17"/>
                                 <textFieldCell key="cell" title="Select save location." allowsEditingTextAttributes="YES" id="aKd-eY-KxA">
                                     <font key="font" metaFont="system" size="14"/>
@@ -766,7 +766,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZZu-nx-JOG" userLabel="Step 2 label">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ZZu-nx-JOG" userLabel="Step 3 label">
                                 <rect key="frame" x="28" y="109" width="156" height="19"/>
                                 <textFieldCell key="cell" title="Step 3" allowsEditingTextAttributes="YES" id="24s-Ap-sOv">
                                     <font key="font" metaFont="systemBold" size="16"/>
@@ -813,11 +813,11 @@
                                 <rect key="frame" x="298" y="146.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="SET-5d-LJw"/>
                             </imageView>
-                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9e9-tR-cbh" userLabel="Step 2 thumbs up">
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9e9-tR-cbh" userLabel="Step 3 thumbs up">
                                 <rect key="frame" x="298" y="90.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="LfU-D0-7Ij"/>
                             </imageView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-NS-gtn" userLabel="Step 1 status">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="J3C-NS-gtn" userLabel="Step 3 status">
                                 <rect key="frame" x="324" y="75" width="134" height="48"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" title="This label tells about the selected save location." id="gVS-fM-gmu">
                                     <font key="font" usesAppearanceFont="YES"/>
