@@ -8,34 +8,39 @@
 import Cocoa
 
 class ViewController: NSViewController {
-    
-    @IBOutlet weak var statusLabel: NSTextField!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    private func updateStatus(_ status: String) {
-        self.statusLabel.stringValue = status
-    }
+    // MARK: - Actions
     
-    override func viewDidAppear() {
-        
-        // TODO Trigger this with a button
-        
+    @IBAction func findChatDb(_ sender: Any) {
         if let dbURL = ChatDbFinder().promptForChatDb() {
             let chatReader = ChatReader(dbPath: dbURL.path)
             switch chatReader?.metrics {
             case .success(let metrics):
-                self.updateStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.")
+                self.updateFindDbStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.", didSucceed: true)
             case .failure(let error):
-                self.updateStatus(error.localizedDescription)
+                self.updateFindDbStatus(error.localizedDescription, didSucceed: false)
             case .none:
-                self.updateStatus("Can't read database.")
+                self.updateFindDbStatus("Can't read database.", didSucceed: false)
             }
         }
     }
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var findDbStatusLabel: NSTextField!
+    @IBOutlet weak var findDbThumbsUp: NSImageView!
+    
+    private func updateFindDbStatus(_ status: String, didSucceed: Bool) {
+        self.findDbStatusLabel.stringValue = status
+        self.findDbThumbsUp.isHidden = !didSucceed
+    }
 
+    // MARK: - Data flow
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
