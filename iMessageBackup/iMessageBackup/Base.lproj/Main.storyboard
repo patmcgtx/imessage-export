@@ -711,15 +711,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-PS-3a9" userLabel="Step 1 status">
-                                <rect key="frame" x="313" y="203" width="101" height="16"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="left" title="Status message" id="C9d-hB-qOW">
+                                <rect key="frame" x="324" y="203" width="11" height="16"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" title="-" id="C9d-hB-qOW">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RhH-U3-WH9" userLabel="Step 1 msg">
-                                <rect key="frame" x="39" y="202" width="156" height="17"/>
+                                <rect key="frame" x="28" y="202" width="156" height="17"/>
                                 <textFieldCell key="cell" title="Find the chat database." allowsEditingTextAttributes="YES" id="2Hf-WG-jzF">
                                     <font key="font" metaFont="system" size="14"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -727,7 +727,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="w1T-Lg-gYu" userLabel="Step 1 label">
-                                <rect key="frame" x="39" y="227" width="156" height="19"/>
+                                <rect key="frame" x="28" y="227" width="156" height="19"/>
                                 <textFieldCell key="cell" title="Step 1" allowsEditingTextAttributes="YES" id="nx9-Er-ZKA">
                                     <font key="font" metaFont="systemBold" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -735,7 +735,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-nA-b5T" userLabel="Find btn">
-                                <rect key="frame" x="210" y="194" width="60" height="32"/>
+                                <rect key="frame" x="199" y="194" width="82" height="32"/>
                                 <buttonCell key="cell" type="push" title="Find" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rU5-iT-nf0" userLabel="Find btn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -745,23 +745,53 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Ni-eFF" userLabel="Step 1 thumbs up">
-                                <rect key="frame" x="287" y="202.5" width="16.5" height="17"/>
+                                <rect key="frame" x="298" y="202.5" width="16.5" height="17"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="hand.thumbsup" catalog="system" id="ffJ-bQ-u1g"/>
                             </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-O6-cRD" userLabel="Options btn">
+                                <rect key="frame" x="199" y="138" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Options" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1wx-uK-2gG" userLabel="Options btn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6em-LA-7EN" userLabel="Select btn">
+                                <rect key="frame" x="199" y="82" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y8q-f8-YyI" userLabel="Select btn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qp4-mr-3Zx" userLabel="Run btn">
+                                <rect key="frame" x="199" y="26" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Run" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dck-r9-vJ1" userLabel="Run btn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Fuo-Ni-eFF" firstAttribute="centerY" secondItem="rWk-PS-3a9" secondAttribute="centerY" id="1Sy-wg-3se"/>
                             <constraint firstItem="w1T-Lg-gYu" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="leading" id="7Cj-3N-HFa"/>
                             <constraint firstItem="w1T-Lg-gYu" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="7hQ-CC-Kcm"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="leading" secondItem="RhH-U3-WH9" secondAttribute="trailing" priority="750" constant="24" id="7jW-Dn-cQ0"/>
+                            <constraint firstItem="6em-LA-7EN" firstAttribute="trailing" secondItem="dg6-O6-cRD" secondAttribute="trailing" id="8PD-Pb-erx"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="top" secondItem="w1T-Lg-gYu" secondAttribute="bottom" constant="8" symbolic="YES" id="8dR-Bw-BUw"/>
+                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="trailing" secondItem="6em-LA-7EN" secondAttribute="trailing" id="HKW-en-Wpf"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="leading" id="Jj8-qP-EW0"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="trailing" secondItem="lMI-nA-b5T" secondAttribute="trailing" id="L7C-g0-4Zl"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="24" id="MVU-uj-2l7"/>
                             <constraint firstItem="RhH-U3-WH9" firstAttribute="trailing" secondItem="w1T-Lg-gYu" secondAttribute="trailing" id="NAr-gN-vW6"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rWk-PS-3a9" secondAttribute="trailing" constant="24" id="QGm-Ab-icD"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="RhH-U3-WH9" secondAttribute="centerY" id="T6i-fo-Qk2"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TJY-na-s1l"/>
+                            <constraint firstItem="6em-LA-7EN" firstAttribute="top" secondItem="dg6-O6-cRD" secondAttribute="bottom" constant="36" id="UpO-E0-ce5"/>
+                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="leading" secondItem="6em-LA-7EN" secondAttribute="leading" id="ZYu-L3-oRV"/>
                             <constraint firstItem="rWk-PS-3a9" firstAttribute="leading" secondItem="Fuo-Ni-eFF" secondAttribute="trailing" constant="12" id="bSx-9e-NgR"/>
+                            <constraint firstItem="qp4-mr-3Zx" firstAttribute="top" secondItem="6em-LA-7EN" secondAttribute="bottom" constant="36" id="eUI-H0-X7h"/>
                             <constraint firstItem="lMI-nA-b5T" firstAttribute="centerY" secondItem="Fuo-Ni-eFF" secondAttribute="centerY" id="oIF-mo-4K6"/>
+                            <constraint firstItem="dg6-O6-cRD" firstAttribute="top" secondItem="lMI-nA-b5T" secondAttribute="bottom" constant="36" id="pYV-yd-ZGY"/>
+                            <constraint firstItem="6em-LA-7EN" firstAttribute="leading" secondItem="dg6-O6-cRD" secondAttribute="leading" id="ra9-vs-OpZ"/>
                             <constraint firstItem="Fuo-Ni-eFF" firstAttribute="leading" secondItem="lMI-nA-b5T" secondAttribute="trailing" priority="750" constant="24" id="z2j-MC-Wqj"/>
                         </constraints>
                     </view>
