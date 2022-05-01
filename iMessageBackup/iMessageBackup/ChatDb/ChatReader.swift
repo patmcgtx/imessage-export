@@ -1,5 +1,5 @@
 //
-//  ChatDb.swift
+//  ChatReader.swift
 //  iMessageBackup
 //
 //  Created by Patrick McGonigle on 4/29/22.
@@ -12,7 +12,9 @@ import SQLite
 struct ChatReader {
     
     private var db: Connection?
-    
+    private let chatTable = ChatSchema.ChatTable()
+    private let messageTable = ChatSchema.MessageTable()
+
     /**
      Creates a chat database reader for the given database path.
      - Parameter dbPath: A path to the chat database.
@@ -22,21 +24,20 @@ struct ChatReader {
         do {
             self.db = try Connection(dbPath, readonly: true)
         } catch {
-            print(error) // TODO patmcg add error handling
             return nil
         }
+    }
+    
+    /// Creates a chat reader for the given database connection
+    init(db: Connection) {
+        self.db = db
     }
     
     /// Counts metrics from the chat database.
     var metrics: Swift.Result<ChatMetrics, Error> {
         do {
-            let chats = Table("chat")
-            let guid = Expression<String>("guid")
-            let numChats = try db?.scalar(chats.select(guid.count)) ?? -1
-            
-            let messages = Table("message")
-            let numMessages = try db?.scalar(messages.select(guid.count)) ?? -1
-
+            let numChats = try db?.scalar(self.chatTable.table.select(self.chatTable.idColumn.count)) ?? -1
+            let numMessages = try db?.scalar(self.messageTable.table.select(self.messageTable.idColumn.count)) ?? -1
             return .success(ChatMetrics(numChats: numChats, numMessages: numMessages))
         } catch {
             return .failure(error)
