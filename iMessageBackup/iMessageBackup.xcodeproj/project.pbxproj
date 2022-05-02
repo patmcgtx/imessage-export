@@ -98,6 +98,7 @@
 		69232E85281C4D8400F3D509 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				69CCB84F281B7C6300C98DD2 /* Main.storyboard */,
 				69CCB848281B7C6100C98DD2 /* ViewController.swift */,
 				69232E86281C4D9A00F3D509 /* ChatDbFinder.swift */,
 			);
@@ -124,14 +125,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		698FBD25281EEA8400E14035 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				698FBD26281EEA9D00E14035 /* InMemoryChatDb.swift */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
 		69CCB83A281B7C6100C98DD2 = {
 			isa = PBXGroup;
 			children = (
@@ -155,15 +148,14 @@
 		69CCB845281B7C6100C98DD2 /* iMessageBackup */ = {
 			isa = PBXGroup;
 			children = (
+				69CCB846281B7C6100C98DD2 /* AppDelegate.swift */,
+				69CCB84D281B7C6300C98DD2 /* Assets.xcassets */,
+				69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */,
 				6969EB67281C89EC00461BAC /* iMessageBackupDebug.entitlements */,
 				698FBD1C281DA76500E14035 /* Model */,
 				69E68557281C1564001E000B /* ChatDb */,
 				69824B1F281F29E200EEF9C0 /* Contacts */,
 				69232E85281C4D8400F3D509 /* UI */,
-				69CCB846281B7C6100C98DD2 /* AppDelegate.swift */,
-				69CCB84D281B7C6300C98DD2 /* Assets.xcassets */,
-				69CCB84F281B7C6300C98DD2 /* Main.storyboard */,
-				69CCB852281B7C6300C98DD2 /* iMessageBackup.entitlements */,
 			);
 			path = iMessageBackup;
 			sourceTree = "<group>";
@@ -171,7 +163,7 @@
 		69CCB85A281B7C6300C98DD2 /* iMessageBackupTests */ = {
 			isa = PBXGroup;
 			children = (
-				698FBD25281EEA8400E14035 /* Support */,
+				698FBD26281EEA9D00E14035 /* InMemoryChatDb.swift */,
 				698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */,
 			);
 			path = iMessageBackupTests;
