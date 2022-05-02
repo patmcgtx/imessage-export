@@ -22,17 +22,18 @@ class ViewController: NSViewController {
     // MARK: - Actions
     
     @IBAction func findChatDb(_ sender: Any) {
-        if let dbURL = ChatDbFinder().promptForChatDb() {
-            let chatReader = ChatReader(dbPath: dbURL.path)
-            switch chatReader?.metrics {
-            case .success(let metrics):
-                self.updateFindDbStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.", didSucceed: true)
-            case .failure(let error):
-                self.updateFindDbStatus(error.localizedDescription, didSucceed: false)
-            case .none:
-                self.updateFindDbStatus("Can't read database.", didSucceed: false)
-            }
-        }
+        Contacts().fetchContact()
+//        if let dbURL = ChatDbFinder().promptForChatDb() {
+//            let chatReader = ChatReader(dbPath: dbURL.path)
+//            switch chatReader?.metrics {
+//            case .success(let metrics):
+//                self.updateFindDbStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.", didSucceed: true)
+//            case .failure(let error):
+//                self.updateFindDbStatus(error.localizedDescription, didSucceed: false)
+//            case .none:
+//                self.updateFindDbStatus("Can't read database.", didSucceed: false)
+//            }
+//        }
     }
     
     // MARK: - View controller lifecycle
