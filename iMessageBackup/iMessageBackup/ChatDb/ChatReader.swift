@@ -36,8 +36,8 @@ struct ChatReader {
     /// Counts metrics from the chat database.
     var metrics: Swift.Result<ChatMetrics, Error> {
         do {
-            let numChats = try db?.scalar(self.chatTable.table.select(self.chatTable.idColumn.count)) ?? -1
-            let numMessages = try db?.scalar(self.messageTable.table.select(self.messageTable.idColumn.count)) ?? -1
+            let numChats = try self.db?.scalar(self.chatTable.sqliteTable.select(self.chatTable.idColumn.count)) ?? -1
+            let numMessages = try self.db?.scalar(self.messageTable.sqliteTable.select(self.messageTable.idColumn.count)) ?? -1
             return .success(ChatMetrics(numChats: numChats, numMessages: numMessages))
         } catch {
             return .failure(error)

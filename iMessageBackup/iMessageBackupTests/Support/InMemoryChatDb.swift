@@ -21,12 +21,12 @@ struct InMemoryChatDb {
         // In-memory database
         self.connection = try Connection()
         
-        try self.connection?.run(chatTable.table.create { table in
+        try self.connection?.run(chatTable.sqliteTable.create { table in
             table.column(chatTable.idColumn, primaryKey: true)
             table.column(chatTable.chatIdentifierColumn)
         })
         
-        try self.connection?.run(messageTable.table.create { table in
+        try self.connection?.run(messageTable.sqliteTable.create { table in
             table.column(messageTable.idColumn, primaryKey: true)
             table.column(messageTable.textColumn)
         })
@@ -36,14 +36,14 @@ struct InMemoryChatDb {
     
     /// Inserts a chat row into this database
     func insert(chat: Chat) throws {
-        try self.connection?.run(self.chatTable.table.insert(
+        try self.connection?.run(self.chatTable.sqliteTable.insert(
             self.chatTable.idColumn <- chat.id,
             self.chatTable.chatIdentifierColumn <- chat.chatIdentifier))
     }
 
     /// Inserts a message row into this database
     func insert(message: Message) throws {
-        try self.connection?.run(self.messageTable.table.insert(
+        try self.connection?.run(self.messageTable.sqliteTable.insert(
             self.messageTable.idColumn <- message.id,
             self.messageTable.textColumn <- message.text))
     }
