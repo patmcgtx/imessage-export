@@ -7,7 +7,7 @@
 
 import Cocoa
 
-// TODO patmcg eventually re-do this in SwiftUI
+// TODO patmcg eventually redo this in SwiftUI (TEXTBAK-34)
 
 class ViewController: NSViewController {
     

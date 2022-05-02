@@ -45,7 +45,7 @@ struct AppleContactsReader: ContactsReader {
 
     func ensureContactsAccess() -> Bool {
 
-        // TODO patmcg come back to this and give it a nice async/await API.
+        // TODO patmcg come back to this and give it a nice async/await API (TEXTBAK-35).
         //             Figure out how to reset to .notDetermined and retest live.
         //             (I have access from being prompted before, so unblocked for now.)
         return true
