@@ -7,10 +7,10 @@
 
 import Cocoa
 
-// TODO patmcg eventually re-do this in SwiftUI
+// TODO patmcg eventually redo this in SwiftUI (TEXTBAK-34)
 
 class ViewController: NSViewController {
-    
+        
     // MARK: - Outlets
     
     @IBOutlet weak var findDbStatusLabel: NSTextField!
@@ -18,13 +18,14 @@ class ViewController: NSViewController {
     @IBOutlet weak var exportOptionsButton: NSButton!
     @IBOutlet weak var exportOptionsThumbsUp: NSImageView!
     @IBOutlet weak var exportOptionsStatusLabel: NSTextField!
-
+    
     // MARK: - Actions
     
     @IBAction func findChatDb(_ sender: Any) {
         if let dbURL = ChatDbFinder().promptForChatDb() {
-            let chatReader = ChatReader(dbPath: dbURL.path)
-            switch chatReader?.metrics {
+            self.chatReader = ChatReader(dbPath: dbURL.path)
+            // TODO patmcg localize strings
+            switch self.chatReader?.metrics {
             case .success(let metrics):
                 self.updateFindDbStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.", didSucceed: true)
             case .failure(let error):
@@ -40,27 +41,47 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Private
 
-    // MARK: - Private helpers
+    private var chatReader: ChatReader? = nil
 
     private func updateFindDbStatus(_ status: String, didSucceed: Bool) {
         
         self.findDbStatusLabel.stringValue = status
         self.findDbStatusLabel.isHidden = false
         self.findDbThumbsUp.isHidden = !didSucceed
-
+        
         if didSucceed {
-            self.exportOptionsButton.isEnabled = true
+            // TODO patmcg move this
+            
+            let allKnownChats = self.chatReader?.allChatsWithKnownContacts
+            var statusMessage = ""
+            
+            // TODO patmcg localize strings
+            switch allKnownChats {
+            case .success(let chats):
+                statusMessage = "Exporting \(chats.count) chats with known contacts using .csv."
+                self.exportOptionsStatusLabel.stringValue = statusMessage
+            case .failure(let error):
+                statusMessage = error.localizedDescription
+            case .none:
+                statusMessage = "No chats found."
+            }
+            
+            self.exportOptionsStatusLabel.stringValue = statusMessage
+            self.exportOptionsStatusLabel.isHidden = false
+            self.exportOptionsThumbsUp.isHidden = false
         }
     }
-
+    
     // MARK: - Data flow
     
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-
+    
 }
 

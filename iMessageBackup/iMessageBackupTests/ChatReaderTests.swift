@@ -33,8 +33,8 @@ class ChatReaderTests: XCTestCase {
     func testMetrics1() throws {
         
         let inMemoryDb = try InMemoryChatDb()
-        try inMemoryDb.insert(chat: Chat(id: 0, guid: "chat0"))
-        try inMemoryDb.insert(message: Message(id: 0, guid: "message0)", text: "Message 0"))
+        try inMemoryDb.insert(chat: Chat(id: 1, chatIdentifier: "person1@example.com", recipient: nil))
+        try inMemoryDb.insert(message: Message(id: 1, text: "Message 1"))
 
         guard let dbConnection = inMemoryDb.connection else {
             return XCTFail("Failed to get in-memory database connection")

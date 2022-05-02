@@ -9,22 +9,21 @@ import SQLite
 
 /// Provides an SQLite instance of a table
 protocol SQLiteTable {
-    var table: Table { get }
+    var sqliteTable: Table { get }
 }
 
 /// The schema for the chat database
 struct ChatSchema {
         
     struct ChatTable: SQLiteTable {
-        var table: Table { Table("chat") }
+        var sqliteTable: Table { Table("chat") }
         let idColumn = Expression<Int>("ROWID")
-        let guidColumn = Expression<String>("guid")
+        let chatIdentifierColumn = Expression<String>("chat_identifier")
     }
 
     struct MessageTable: SQLiteTable {
-        var table: Table { Table("message") }
+        var sqliteTable: Table { Table("message") }
         let idColumn = Expression<Int>("ROWID")
-        let guidColumn = Expression<String>("guid")
         let textColumn = Expression<String>("text")
     }
     
