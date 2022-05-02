@@ -1,5 +1,5 @@
 //
-//  AppleContactsReader.swift
+//  AppleContacts.swift
 //  iMessageBackup
 //
 //  Created by Patrick McGonigle on 5/1/22.
@@ -7,14 +7,14 @@
 
 import Contacts
 
-/// A standard macOS Apple Contacts implementation of a `ContactsReader`.
-struct AppleContactsReader: ContactsReader {
+/// An Apple Contacts implementation of a `ReversePhoneBook`.
+struct AppleContacts: ReversePhoneBook {
 
     private let store = CNContactStore()
 
-    // MARK: - ContactsReader
+    // MARK: - ReversePhoneBook
     
-    func person(identifiedAs identifier: String) -> Person? {
+    func findPerson(byIdentifier identifier: String) -> Person? {
         
         var retval: Person? = nil
         let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactEmailAddressesKey] as [CNKeyDescriptor]
@@ -43,7 +43,7 @@ struct AppleContactsReader: ContactsReader {
         return retval
     }
 
-    func ensureContactsAccess() -> Bool {
+    func confirmAccess() -> Bool {
 
         // TODO patmcg come back to this and give it a nice async/await API (TEXTBAK-35).
         //             Figure out how to reset to .notDetermined and retest live.

@@ -38,7 +38,7 @@ struct InMemoryChatDb {
     func insert(chat: Chat) throws {
         try self.connection?.run(self.chatTable.table.insert(
             self.chatTable.idColumn <- chat.id,
-            self.chatTable.chatIdentifierColumn <- chat.personIdentifier))
+            self.chatTable.chatIdentifierColumn <- chat.chatIdentifier))
     }
 
     /// Inserts a message row into this database
@@ -51,14 +51,14 @@ struct InMemoryChatDb {
     // MARK: - Bulk insert functions
         
     func insertChats(count: Int) throws {
-        let chats = Array(1...count).map { Chat(id: $0, personIdentifier: "person\($0)@example.com") }
+        let chats = Array(1...count).map { Chat(id: $0, chatIdentifier: "person\($0)@example.com", recipient: nil) }
         for chat in chats {
             try self.insert(chat: chat)
         }
     }
 
     func insertMessages(count: Int) throws {
-        let messages = Array(1...count).map { Message(id: $0, text: "Message $0") }
+        let messages = Array(1...count).map { Message(id: $0, text: "Message \($0)") }
         for message in messages {
             try self.insert(message: message)
         }

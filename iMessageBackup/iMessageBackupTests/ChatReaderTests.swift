@@ -33,7 +33,7 @@ class ChatReaderTests: XCTestCase {
     func testMetrics1() throws {
         
         let inMemoryDb = try InMemoryChatDb()
-        try inMemoryDb.insert(chat: Chat(id: 1, personIdentifier: "person1@example.com"))
+        try inMemoryDb.insert(chat: Chat(id: 1, chatIdentifier: "person1@example.com", recipient: nil))
         try inMemoryDb.insert(message: Message(id: 1, text: "Message 1"))
 
         guard let dbConnection = inMemoryDb.connection else {
