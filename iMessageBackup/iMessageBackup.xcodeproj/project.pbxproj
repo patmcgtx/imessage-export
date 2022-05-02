@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69232E87281C4D9A00F3D509 /* ChatDbFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69232E86281C4D9A00F3D509 /* ChatDbFinder.swift */; };
 		69824B21281F2A0C00EEF9C0 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69824B20281F2A0C00EEF9C0 /* Contacts.swift */; };
+		69824B25281F643100EEF9C0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69824B24281F643100EEF9C0 /* Person.swift */; };
 		698FBD1E281DA77600E14035 /* ChatMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD1D281DA77600E14035 /* ChatMetrics.swift */; };
 		698FBD20281ED6C200E14035 /* ChatReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */; };
 		698FBD22281EE95000E14035 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698FBD21281EE95000E14035 /* Chat.swift */; };
@@ -46,6 +47,7 @@
 		69232E86281C4D9A00F3D509 /* ChatDbFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDbFinder.swift; sourceTree = "<group>"; };
 		6969EB67281C89EC00461BAC /* iMessageBackupDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageBackupDebug.entitlements; sourceTree = "<group>"; };
 		69824B20281F2A0C00EEF9C0 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		69824B24281F643100EEF9C0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		698FBD1D281DA77600E14035 /* ChatMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMetrics.swift; sourceTree = "<group>"; };
 		698FBD1F281ED6C100E14035 /* ChatReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatReaderTests.swift; sourceTree = "<group>"; };
 		698FBD21281EE95000E14035 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				698FBD21281EE95000E14035 /* Chat.swift */,
 				698FBD23281EE96100E14035 /* Message.swift */,
 				698FBD1D281DA77600E14035 /* ChatMetrics.swift */,
+				69824B24281F643100EEF9C0 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69824B25281F643100EEF9C0 /* Person.swift in Sources */,
 				69CCB849281B7C6100C98DD2 /* ViewController.swift in Sources */,
 				698FBD22281EE95000E14035 /* Chat.swift in Sources */,
 				698FBD1E281DA77600E14035 /* ChatMetrics.swift in Sources */,

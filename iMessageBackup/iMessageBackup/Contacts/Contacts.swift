@@ -7,39 +7,57 @@
 
 import Contacts
 
+/// TODO patmcg
 struct Contacts {
     
-    func fetchContact() {
+    /// TODO patmcg doc
+    func requestContactsAccess() -> Bool {
+
+        // TODO patmcg come back tp this and give it a nice async/await API.
+        //             Figure out how to reset ,notDetermined and retest.
+
+        // I have access from being prompted before, so unblocked for now
+        return true
+                
+        /*
+        var retval = false
         
-        // TODO patmcg can I get rid of this authorizationStatus check?
         switch CNContactStore.authorizationStatus(for: .contacts) {
-        case .restricted:
-            print("restricted")
-        case .denied:
-            print("denied")
         case .authorized:
             print("authorized")
-        case .notDetermined:
+        case .restricted, .denied, .notDetermined:
             let store = CNContactStore()
             store.requestAccess(for: CNEntityType.contacts) { accessAllowed, error in
-                if accessAllowed {
-                    do {
-                        let predicate = CNContact.predicateForContacts(matchingName: "Appleseed")
-                        let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey] as [CNKeyDescriptor]
-                        let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
-                        print("Fetched contacts: \(contacts)")
-                    } catch {
-                        print("Failed to fetch contact, error: \(error)")
-                        // Failed to fetch contact, error: Error Domain=CNErrorDomain Code=100 "Access Denied" UserInfo={NSLocalizedDescription=Access Denied, NSLocalizedFailureReason=This application has not been granted permission to access Contacts.}
-                    }
-                } else {
-                    print("Contacts access not allowed: \(String(describing: error?.localizedDescription))")
-                }
+                retval = accessAllowed
             }
         @unknown default:
+            // TODO patmcg Improve error handling
             print("unknown")
         }
-        
+        return retval
+         */
+    }
+    
+    /// TODO patmcg doc
+    func person(identifiedAs identifier: String) -> Person? {
+        var retval: Person? = nil
+        do {
+            let store = CNContactStore()
+//            let predicate = CNContact.predicateForContacts(withIdentifiers: [identifier])
+//            let phone = CNPhoneNumber(stringValue: identifier)
+//            let predicate = CNContact.predicateForContacts(matching: phone)
+            let predicate = CNContact.predicateForContacts(matchingEmailAddress: identifier)
+            let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey] as [CNKeyDescriptor]
+            let contacts: [CNContact] = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
+            if let contact = contacts.first {
+                retval = Person(firstName: contact.givenName, lastName: contact.familyName)
+            }
+        } catch {
+            // TODO patmcg Improve error handling
+            print("Failed to fetch contact, error: \(error)")
+        }
+        return retval
     }
     
 }
+
