@@ -38,16 +38,15 @@ struct Contacts {
          */
     }
     
-    /// TODO patmcg doc
+    /// TODO patmcg doc - identifier is phone or email
     func person(identifiedAs identifier: String) -> Person? {
         var retval: Person? = nil
         do {
             let store = CNContactStore()
-//            let predicate = CNContact.predicateForContacts(withIdentifiers: [identifier])
-//            let phone = CNPhoneNumber(stringValue: identifier)
-//            let predicate = CNContact.predicateForContacts(matching: phone)
-            let predicate = CNContact.predicateForContacts(matchingEmailAddress: identifier)
-            let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey] as [CNKeyDescriptor]
+            let phone = CNPhoneNumber(stringValue: identifier)
+            let predicate = CNContact.predicateForContacts(matching: phone)
+//            let predicate = CNContact.predicateForContacts(matchingEmailAddress: identifier)
+            let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactEmailAddressesKey] as [CNKeyDescriptor]
             let contacts: [CNContact] = try store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch)
             if let contact = contacts.first {
                 retval = Person(firstName: contact.givenName, lastName: contact.familyName)
