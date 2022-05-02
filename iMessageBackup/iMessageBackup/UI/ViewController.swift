@@ -10,7 +10,7 @@ import Cocoa
 // TODO patmcg eventually redo this in SwiftUI (TEXTBAK-34)
 
 class ViewController: NSViewController {
-    
+        
     // MARK: - Outlets
     
     @IBOutlet weak var findDbStatusLabel: NSTextField!
@@ -23,8 +23,9 @@ class ViewController: NSViewController {
     
     @IBAction func findChatDb(_ sender: Any) {
         if let dbURL = ChatDbFinder().promptForChatDb() {
-            let chatReader = ChatReader(dbPath: dbURL.path)
-            switch chatReader?.metrics {
+            self.chatReader = ChatReader(dbPath: dbURL.path)
+            // TODO patmcg localize strings
+            switch self.chatReader?.metrics {
             case .success(let metrics):
                 self.updateFindDbStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.", didSucceed: true)
             case .failure(let error):
@@ -41,8 +42,10 @@ class ViewController: NSViewController {
         super.viewDidLoad()
     }
     
-    // MARK: - Private helpers
-    
+    // MARK: - Private
+
+    private var chatReader: ChatReader? = nil
+
     private func updateFindDbStatus(_ status: String, didSucceed: Bool) {
         
         self.findDbStatusLabel.stringValue = status
@@ -50,7 +53,25 @@ class ViewController: NSViewController {
         self.findDbThumbsUp.isHidden = !didSucceed
         
         if didSucceed {
-            self.exportOptionsButton.isEnabled = true
+            // TODO patmcg move this
+            
+            let allKnownChats = self.chatReader?.allChatsWithKnownContacts
+            var statusMessage = ""
+            
+            // TODO patmcg localize strings
+            switch allKnownChats {
+            case .success(let chats):
+                statusMessage = "Exporting \(chats.count) chats with known contacts using .csv."
+                self.exportOptionsStatusLabel.stringValue = statusMessage
+            case .failure(let error):
+                statusMessage = error.localizedDescription
+            case .none:
+                statusMessage = "No chats found."
+            }
+            
+            self.exportOptionsStatusLabel.stringValue = statusMessage
+            self.exportOptionsStatusLabel.isHidden = false
+            self.exportOptionsThumbsUp.isHidden = false
         }
     }
     
