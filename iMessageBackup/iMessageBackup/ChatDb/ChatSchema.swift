@@ -18,13 +18,12 @@ struct ChatSchema {
     struct ChatTable: SQLiteTable {
         var table: Table { Table("chat") }
         let idColumn = Expression<Int>("ROWID")
-        let guidColumn = Expression<String>("guid")
+        let chatIdentifierColumn = Expression<String>("chat_identifier")
     }
 
     struct MessageTable: SQLiteTable {
         var table: Table { Table("message") }
         let idColumn = Expression<Int>("ROWID")
-        let guidColumn = Expression<String>("guid")
         let textColumn = Expression<String>("text")
     }
     

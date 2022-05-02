@@ -10,6 +10,5 @@ import Foundation
 /// Represents a chat message
 struct Message {
     let id: Int
-    let guid: String
     let text: String
 }

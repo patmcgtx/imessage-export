@@ -39,6 +39,7 @@ struct AppleContactsReader: ContactsReader {
             // TODO patmcg Improve error handling; consider throwing to distinguish an error vs. just not finding a person
             print("Failed to fetch contact, error: \(error)")
         }
+        
         return retval
     }
 

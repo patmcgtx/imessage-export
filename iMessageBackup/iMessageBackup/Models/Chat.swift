@@ -10,5 +10,5 @@ import Foundation
 /// Represents a chat conversation
 struct Chat {
     let id: Int
-    let guid: String
+    let chatIdentifier: String
 }

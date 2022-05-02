@@ -23,12 +23,11 @@ struct InMemoryChatDb {
         
         try self.connection?.run(chatTable.table.create { table in
             table.column(chatTable.idColumn, primaryKey: true)
-            table.column(chatTable.guidColumn, unique: true)
+            table.column(chatTable.chatIdentifierColumn)
         })
         
         try self.connection?.run(messageTable.table.create { table in
             table.column(messageTable.idColumn, primaryKey: true)
-            table.column(messageTable.guidColumn, unique: true)
             table.column(messageTable.textColumn)
         })
     }
@@ -39,28 +38,27 @@ struct InMemoryChatDb {
     func insert(chat: Chat) throws {
         try self.connection?.run(self.chatTable.table.insert(
             self.chatTable.idColumn <- chat.id,
-            self.chatTable.guidColumn <- chat.guid))
+            self.chatTable.chatIdentifierColumn <- chat.chatIdentifier))
     }
 
     /// Inserts a message row into this database
     func insert(message: Message) throws {
         try self.connection?.run(self.messageTable.table.insert(
             self.messageTable.idColumn <- message.id,
-            self.messageTable.guidColumn <- message.guid,
             self.messageTable.textColumn <- message.text))
     }
 
     // MARK: - Bulk insert functions
         
     func insertChats(count: Int) throws {
-        let chats = Array(1...count).map { Chat(id: $0, guid: "chat\($0)") }
+        let chats = Array(1...count).map { Chat(id: $0, chatIdentifier: "chat\($0)") }
         for chat in chats {
             try self.insert(chat: chat)
         }
     }
 
     func insertMessages(count: Int) throws {
-        let messages = Array(1...count).map { Message(id: $0, guid: "message\($0)", text: "Message $0") }
+        let messages = Array(1...count).map { Message(id: $0, text: "Message $0") }
         for message in messages {
             try self.insert(message: message)
         }
