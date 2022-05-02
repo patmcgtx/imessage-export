@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Represents a person taking part in a chat
+/// Represents a person taking part in a chat.
 struct Person {
     let firstName: String
     let lastName: String

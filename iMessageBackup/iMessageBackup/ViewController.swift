@@ -33,9 +33,6 @@ class ViewController: NSViewController {
                 self.updateFindDbStatus("Can't read database.", didSucceed: false)
             }
         }
-        
-        let contacts = Contacts()
-        let person = contacts.person(identifiedAs: "+15125555555")
     }
     
     // MARK: - View controller lifecycle
