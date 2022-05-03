@@ -14,28 +14,32 @@ struct ChatReader {
     private var db: Connection?
     private let chatTable = ChatSchema.ChatTable()
     private let messageTable = ChatSchema.MessageTable()
-    private let reversePhoneBook: ReversePhoneBook = AppleContacts() // TODO patmcg consider DI
+    private let reversePhoneBook: ReversePhoneBook
 
     /**
      Creates a chat database reader for the given database path.
      - Parameter dbPath: A path to the chat database.
      - Returns: A chat reader instance _or_ `nil` if the database can't be read.
      */
-    init?(dbPath: String) {
+    init?(dbPath: String, reversePhoneBook: ReversePhoneBook) {
+        // TODO patmcg make this throws
         do {
             self.db = try Connection(dbPath, readonly: true)
+            self.reversePhoneBook = reversePhoneBook
         } catch {
             return nil
         }
     }
     
     /// Creates a chat reader for the given database connection
-    init(db: Connection) {
+    init(db: Connection, reversePhoneBook: ReversePhoneBook) {
         self.db = db
+        self.reversePhoneBook = reversePhoneBook
     }
     
     /// Counts metrics from the chat database.
     var metrics: Swift.Result<ChatMetrics, Error> {
+        // TODO patmcg make this throws
         do {
             let numChats = try self.db?.scalar(self.chatTable.sqliteTable.select(self.chatTable.idColumn.count)) ?? -1
             let numMessages = try self.db?.scalar(self.messageTable.sqliteTable.select(self.messageTable.idColumn.count)) ?? -1

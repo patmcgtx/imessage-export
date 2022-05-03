@@ -23,7 +23,7 @@ class ViewController: NSViewController {
     
     @IBAction func findChatDb(_ sender: Any) {
         if let dbURL = ChatDbFinder().promptForChatDb() {
-            self.chatReader = ChatReader(dbPath: dbURL.path)
+            self.chatReader = ChatReader(dbPath: dbURL.path, reversePhoneBook: AppleContacts())
             // TODO patmcg localize strings
             switch self.chatReader?.metrics {
             case .success(let metrics):
