@@ -13,6 +13,7 @@ protocol ReversePhoneBook {
      - Returns: `true` if this app has or was able to obtain permission to read contacts, `false` otherwise.
      */
     func confirmAccess() -> Bool
+    // TODO patmcg make this async (TEXTBAK-40)
 
     /**
      Looks up a person by a phone or email identifier.
@@ -20,6 +21,7 @@ protocol ReversePhoneBook {
      - Returns: A person with the given identifier, or `nil` if none can be found.
      */
     func findPerson(byIdentifier identifier: String) -> Person?
+    // TODO patmcg make this throws (TEXTBAK-41)
 }
     
 

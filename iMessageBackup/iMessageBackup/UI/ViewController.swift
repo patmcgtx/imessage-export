@@ -24,7 +24,7 @@ class ViewController: NSViewController {
     @IBAction func findChatDb(_ sender: Any) {
         if let dbURL = ChatDbFinder().promptForChatDb() {
             self.chatReader = ChatReader(dbPath: dbURL.path, reversePhoneBook: AppleContacts())
-            // TODO patmcg localize strings
+            // TODO patmcg localize strings (TEXTBAK-42)
             switch self.chatReader?.metrics {
             case .success(let metrics):
                 self.updateFindDbStatus("Found \(metrics.numMessages) messages and \(metrics.numChats) chats.", didSucceed: true)
@@ -58,7 +58,7 @@ class ViewController: NSViewController {
             let allKnownChats = self.chatReader?.allChatsWithKnownContacts
             var statusMessage = ""
             
-            // TODO patmcg localize strings
+            // TODO patmcg localize strings (TEXTBAK-42)
             switch allKnownChats {
             case .success(let chats):
                 statusMessage = "Exporting \(chats.count) chats with known contacts using .csv."

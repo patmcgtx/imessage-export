@@ -22,7 +22,7 @@ struct ChatReader {
      - Returns: A chat reader instance _or_ `nil` if the database can't be read.
      */
     init?(dbPath: String, reversePhoneBook: ReversePhoneBook) {
-        // TODO patmcg make this throws
+        // TODO patmcg make this throws (TEXTBAK-41)
         do {
             self.db = try Connection(dbPath, readonly: true)
             self.reversePhoneBook = reversePhoneBook
@@ -39,7 +39,7 @@ struct ChatReader {
     
     /// Counts metrics from the chat database.
     var metrics: Swift.Result<ChatMetrics, Error> {
-        // TODO patmcg make this throws
+        // TODO patmcg make this throws (TEXTBAK-41)
         do {
             let numChats = try self.db?.scalar(self.chatTable.sqliteTable.select(self.chatTable.idColumn.count)) ?? -1
             let numMessages = try self.db?.scalar(self.messageTable.sqliteTable.select(self.messageTable.idColumn.count)) ?? -1
@@ -49,8 +49,8 @@ struct ChatReader {
         }
     }
     
-    // TODO patmcg make this async
-    // TODO patmcg make this throws
+    // TODO patmcg make this async (TEXTBAK-40)
+    // TODO patmcg make this throws (TEXTBAK-41)
     /// Gets all the chats in the database
     var allChats: Swift.Result<[Chat], Error> {
         
@@ -76,8 +76,8 @@ struct ChatReader {
         return .success(result)
     }
 
-    // TODO patmcg make this async
-    // TODO patmcg make this throws
+    // TODO patmcg make this async (TEXTBAK-40)
+    // TODO patmcg make this throws (TEXTBAK-41)
     /// Gets all the chats with known contact
     var allChatsWithKnownContacts: Swift.Result<[Chat], Error> {
         let allChats = self.allChats

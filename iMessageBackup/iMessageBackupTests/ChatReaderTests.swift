@@ -11,64 +11,68 @@ import SQLite
 
 class ChatReaderTests: XCTestCase {
         
-    func testMetricsEmpty() throws {
+    private var inMemoryDb: InMemoryChatDb?
+    private var dbConnection: Connection?
+    private var chatReader: ChatReader?
+    
+    override func setUp() {
         
-        let inMemoryDb = try InMemoryChatDb()
-
-        guard let dbConnection = inMemoryDb.connection else {
-            return XCTFail("Failed to get in-memory database connection")
+        do {
+            self.inMemoryDb = try InMemoryChatDb()
+            self.dbConnection = self.inMemoryDb?.connection
+            if let connection = self.dbConnection {
+                self.chatReader = ChatReader(db: connection, reversePhoneBook: InMemoryContacts())
+            }
+        } catch {
+            XCTFail()
         }
         
-        let reader = ChatReader(db: dbConnection)
-        
-        switch reader.metrics {
+        XCTAssertNotNil(self.inMemoryDb)
+        XCTAssertNotNil(self.dbConnection)
+        XCTAssertNotNil(self.chatReader)
+    }
+    
+    func testMetricsEmpty() throws {        
+        switch self.chatReader?.metrics {
         case .success(let result):
             XCTAssertEqual(result.numChats, 0)
             XCTAssertEqual(result.numMessages, 0)
         case .failure:
             XCTFail("Metrics call failed")
+        case .none:
+            XCTFail("Missing chat reader")
         }
     }
 
     func testMetrics1() throws {
         
-        let inMemoryDb = try InMemoryChatDb()
-        try inMemoryDb.insert(chat: Chat(id: 1, chatIdentifier: "person1@example.com", recipient: nil))
-        try inMemoryDb.insert(message: Message(id: 1, text: "Message 1"))
-
-        guard let dbConnection = inMemoryDb.connection else {
-            return XCTFail("Failed to get in-memory database connection")
-        }
+        try self.inMemoryDb?.insert(chat: Chat(id: 1, chatIdentifier: "person1@example.com", recipient: nil))
+        try self.inMemoryDb?.insert(message: Message(id: 1, text: "Message 1"))
         
-        let reader = ChatReader(db: dbConnection)
-        
-        switch reader.metrics {
+        switch self.chatReader?.metrics {
         case .success(let result):
             XCTAssertEqual(result.numChats, 1)
             XCTAssertEqual(result.numMessages, 1)
         case .failure:
             XCTFail("Metrics call failed")
+        case .none:
+            XCTFail("Missing chat reader")
         }
     }
     
     func testMetrics100() throws {
         
-        let inMemoryDb = try InMemoryChatDb()
-        try inMemoryDb.insertChats(count: 100)
-        try inMemoryDb.insertMessages(count: 100)
-
-        guard let dbConnection = inMemoryDb.connection else {
-            return XCTFail("Failed to get in-memory database connection")
-        }
+        try self.inMemoryDb?.insertChats(count: 100)
+        try self.inMemoryDb?.insertMessages(count: 100)
         
-        let reader = ChatReader(db: dbConnection)
-        
-        switch reader.metrics {
+        switch self.chatReader?.metrics {
         case .success(let result):
             XCTAssertEqual(result.numChats, 100)
             XCTAssertEqual(result.numMessages, 100)
         case .failure:
             XCTFail("Metrics call failed")
+        case .none:
+            XCTFail("Missing chat reader")
         }
     }
 
