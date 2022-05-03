@@ -46,6 +46,7 @@ struct ChatReader {
     }
     
     // TODO patmcg make this async
+    // TODO patmcg make this throws
     /// Gets all the chats in the database
     var allChats: Swift.Result<[Chat], Error> {
         
@@ -62,7 +63,7 @@ struct ChatReader {
                     print(chat.debugDescription)
                 }
             } catch {
-                
+                return .failure(error)
             }
         } else {
             return .failure(DbError.noDatabase)
@@ -72,6 +73,7 @@ struct ChatReader {
     }
 
     // TODO patmcg make this async
+    // TODO patmcg make this throws
     /// Gets all the chats with known contact
     var allChatsWithKnownContacts: Swift.Result<[Chat], Error> {
         let allChats = self.allChats
