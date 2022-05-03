@@ -61,6 +61,7 @@ struct ChatReader {
                 let rowIterator = try database.prepareRowIterator(self.chatTable.sqliteTable)
                 for chatRow in try Array(rowIterator) {
                     let chatIdentifier = chatRow[self.chatTable.chatIdentifierColumn]
+                    // Note that this is effectively joining the chat db with a different store (the Contacts app).
                     let chat = Chat(id: chatRow[self.chatTable.idColumn], chatIdentifier: chatIdentifier,
                                     recipient: self.reversePhoneBook.findPerson(byIdentifier: chatIdentifier))
                     result.append(chat)
@@ -84,7 +85,7 @@ struct ChatReader {
         switch allChats {
         case .success(let chats):
             // Note that you can't do an SQL query to figure out if the chat has a known contact
-            // because contacts are in a different store (the Contacts app).
+            // because contacts are in a different store ^ (the Contacts app).
             return .success(chats.filter { $0.recipient != nil })
         case .failure:
             return allChats
