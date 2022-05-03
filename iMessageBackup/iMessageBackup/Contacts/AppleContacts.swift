@@ -36,7 +36,7 @@ struct AppleContacts: ReversePhoneBook {
                 }
             }
         } catch {
-            // TODO patmcg Improve error handling; consider throwing to distinguish an error vs. just not finding a person
+            // TODO patmcg consider throwing to distinguish an error vs. just not finding a person (TEXTBAK-41)
             print("Failed to fetch contact, error: \(error)")
         }
         
@@ -45,7 +45,7 @@ struct AppleContacts: ReversePhoneBook {
 
     func confirmAccess() -> Bool {
 
-        // TODO patmcg come back to this and give it a nice async/await API (TEXTBAK-35).
+        // TODO patmcg come back to this and give it a nice async/await API (TEXTBAK-35/TEXTBAK-40).
         //             Figure out how to reset to .notDetermined and retest live.
         //             (I have access from being prompted before, so unblocked for now.)
         return true
@@ -62,7 +62,7 @@ struct AppleContacts: ReversePhoneBook {
                 retval = accessAllowed
             }
         @unknown default:
-            // TODO patmcg Improve error handling
+            // TODO patmcg Improve error handling (TEXTBAK-41)
             print("unknown")
         }
         return retval
