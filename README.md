@@ -1,4 +1,4 @@
-# iMessage Backup
+# iMessage ~~Backup~~ Export
 This macOS app will back up your iMessages to your specification. (Work in progeress.)
 
 ### Wireframe
